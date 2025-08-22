@@ -355,7 +355,7 @@ module.exports.settings = (function() {
           }
         },
         stacking: {
-          enable: setting('ui.palette.stacking.enable', SettingType.TOGGLE, false, $('#setting-ui-palette-stacking-enable'))
+          enable: setting('ui.palette.stacking.enable', SettingType.TOGGLE, true, $('#setting-ui-palette-stacking-enable'))
         }
       },
       chat: {
