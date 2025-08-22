@@ -346,6 +346,14 @@ const board = (function() {
           clientX = event.clientX;
           clientY = event.clientY;
         }
+
+        if(!self.allowDrag && place.color > -1) {
+          clearTimeout(self.holdTimer.id);
+          const pos = self.fromScreen(clientX, clientY);
+          place.place(pos.x, pos.y);
+          return;
+        }
+
         if (Math.abs(downX - clientX) > 5 || Math.abs(downY - clientY) > 5) {
           clearTimeout(self.holdTimer.id);
           self.holdTimer.id = -1;

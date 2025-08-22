@@ -42,7 +42,7 @@ module.exports.timer = (function() {
           notif = nativeNotifications.maybeShow(__(`Your next pixel will be available in ${delay} seconds!`));
         }
         setTimeout(() => {
-          uiHelper.setPlaceableText(1);
+          uiHelper.setPlaceableText(uiHelper.getAvailable() + 1);
           if (notif) {
             $(window).one('pxls:ack:place', () => notif.close());
           }
@@ -95,7 +95,7 @@ module.exports.timer = (function() {
           self.hasFiredNotification = true;
         }, alertDelay * 1000);
         setTimeout(() => {
-          uiHelper.setPlaceableText(1);
+          uiHelper.setPlaceableText(uiHelper.getAvailable() + 1);
         }, delta * 1000);
         return;
       }
@@ -108,7 +108,7 @@ module.exports.timer = (function() {
             $(window).one('pxls:ack:place', () => notif.close());
           }
         }
-        uiHelper.setPlaceableText(1);
+        uiHelper.setPlaceableText(uiHelper.getAvailable() + 1);
         self.hasFiredNotification = true;
       }
     },
@@ -119,7 +119,7 @@ module.exports.timer = (function() {
 
       setTimeout(function() {
         if (self.cooledDown() && uiHelper.getAvailable() === 0) {
-          uiHelper.setPlaceableText(1);
+          uiHelper.setPlaceableText(uiHelper.getAvailable() + 1);
         }
       }, 250);
       socket.on('cooldown', function(data) {

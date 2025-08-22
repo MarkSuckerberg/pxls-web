@@ -678,7 +678,7 @@ const uiHelper = (function() {
       ].join(', ')).css('filter', level != null ? `brightness(${level})` : '');
     },
     getAvailable() {
-      return self._available;
+      return self.pixelsAvailable;
     },
     styleElemWithChatNameColor: (elem, colorIdx, layer = 'bg') => {
       elem.classList.remove(...self.specialChatColorClasses.reduce((acc, val) => {

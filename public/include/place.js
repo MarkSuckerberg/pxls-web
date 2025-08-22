@@ -78,7 +78,7 @@ module.exports.place = (function() {
       }
     },
     place: function(x, y, color = null) {
-      if (!timer.cooledDown() || self.color === -1) { // nope can't place yet
+      if ((!timer.cooledDown() && !uiHelper.getAvailable()) || self.color === -1) { // nope can't place yet
         return;
       }
       self._place(x, y, color);
