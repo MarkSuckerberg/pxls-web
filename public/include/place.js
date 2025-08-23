@@ -149,7 +149,7 @@ module.exports.place = (function() {
     setPalette: function(palette) {
       self.palette = palette;
       self.elements.palette.find('.palette-button').remove().end().append(
-        $.map(self.palette, function(color, idx) {
+        $.map(self.palette.filter(c => !c.background), function(color, idx) {
           return $('<button>')
             .attr('title', color.name)
             .attr('type', 'button')
