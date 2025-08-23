@@ -149,8 +149,8 @@ module.exports.place = (function() {
     setPalette: function(palette) {
       self.palette = palette;
       self.elements.palette.find('.palette-button').remove().end().append(
-        $.map(self.palette.filter(c => !c.background), function(color, idx) {
-          return $('<button>')
+        $.map(self.palette, function(color, idx) {
+          const button = $('<button>')
             .attr('title', color.name)
             .attr('type', 'button')
             .attr('data-idx', idx)
@@ -164,6 +164,8 @@ module.exports.place = (function() {
             .click(function() {
               self.switch(idx);
             });
+          if (color.background) return button.addClass('palette-button-special').hide();
+          return button;
         })
       );
       self.elements.palette.prepend(
