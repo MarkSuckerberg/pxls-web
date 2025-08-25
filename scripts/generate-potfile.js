@@ -5,7 +5,7 @@ const { listFiles } = require('../utils.js');
 const { findTranslationCalls, contract } = require('./localization-util');
 
 const PO = require('pofile');
-const esprima = require('esprima');
+const esprima = require('esprima-next');
 const Handlebars = require('@handlebars/parser');
 
 const viewsFiles = listFiles(path.join(__dirname, '..', 'views'));

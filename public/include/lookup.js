@@ -4,6 +4,7 @@ const { user } = require('./user');
 const { template } = require('./template');
 const { chat } = require('./chat');
 const { coords } = require('./coords');
+const { i18n } = require('./helpers');
 let board;
 
 // this is the user lookup helper
@@ -270,7 +271,7 @@ module.exports.lookup = (function() {
               const minuteStr = minutes < 10 ? '0' + minutes : minutes;
               const hours = Math.floor(delta / 3600);
               const hoursStr = hours < 10 ? '0' + hours : hours;
-              return span.text(__(`${hoursStr}:${minuteStr}:${secsStr} ago`));
+              return span.text(i18n(__('{hoursStr}:{minuteStr}:{secsStr} ago'), { hoursStr, minuteStr, secsStr }));
             }
           }
         }, {

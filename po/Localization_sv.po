@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2025-08-25T15:32:08.074Z\n"
 "PO-Revision-Date: 2023-12-15 08:20+0000\n"
 "Last-Translator: Weblate Admin <thiscamefrom@pxls.space>\n"
 "Language-Team: Swedish <https://weblate.pxls.space/projects/pxls-space/pxls-web/sv/>\n"
@@ -1308,44 +1308,24 @@ msgid "Welcome!"
 msgstr "Välkommen!"
 
 #: /views/partials/info.handlebars
-msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
-msgstr "Välkommen till pxls.space! Pxls är ett fler-spelare online samarbets kanvas baserad på <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">/r/place</a>, som låter dig göra vad som helst som du kan komma på, en pixel åt gången. Gå med hundratals av andra spelare i Pxls gemensamheten och gör fantastiska konstverk tillsammans som ett team, eller solo."
-
-#: /views/partials/info.handlebars
-msgid "The best place to reach staff and fellow community is in the discord!"
-msgstr "Den bästa platsen att nå moderatorerna och vårt gemenskap i discord servern!"
-
-#: /views/partials/info.handlebars
-msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-msgstr "Kolla på våra sociala medier sidor, och snälla ta den tid som behövs för att läsa igenom reglerna vi har. Ha kul med görandet av (eller att ändra) konst!"
-
-#: /views/partials/info.handlebars
 msgid "Canvas Rules"
 msgstr "Kanvas Regler"
 
 #: /views/partials/info.handlebars
-msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
-msgstr "Vi är stolta över att försöka hålla en öppen kanvas för alla, fri från yttre störning på vår sida, speciellt censoring. Men, för vårt gemenskaps bästa och på grund av vår egen tro, snälla acceptera oc följ dem följande reglerna:"
+msgid "<b>PLEASE BE 18+.</b> This isn't specifically a NSFW canvas, but this is for adults only."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
-msgstr "Inga hatfyllda bilder eller förkränkande språk. Detta inkluderar, men är inte begränsat till ord som <i>f****t</i>, <i>n****r</i>, etc; ävensom Hakkorset, Hammare och Skäran, eller andra symboler av terrorism."
+msgid "No hateful imagery or derogatory speech."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No NSFW or NSFL content."
-msgstr "Inget NSFW (Not Safe For Work) eller NSFL (Not Safe For Life) innehåll."
+msgid "No overly NSFW or NSFL content."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No nudity or otherwise sexually explicit content"
-msgstr "Ingen nakenhet eller annars sexuellt explicit innehåll"
-
-#: /views/partials/info.handlebars
-msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
-msgstr "Inga kvinno-presenterande nippel/bara bröst, genitalier eller sexuella vätskor"
-
-#: /views/partials/info.handlebars
-msgid "No sexual imagery/erotica"
-msgstr "Inget sexuellt eller erotiska konstverk"
+msgid "No excessive nudity or otherwise sexually explicit content"
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No excessive blood or otherwise obscene/shocking content"
@@ -1372,10 +1352,6 @@ msgid "Staff have final say in any rule disputes"
 msgstr "Moderatorer har sista ordet i alla regel konflikter"
 
 #: /views/partials/info.handlebars
-msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
-msgstr "Om du känner att en moderator har agerat olämpligt, snälla raportera det till en administrator."
-
-#: /views/partials/info.handlebars
 msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
 msgstr "Om du tror att du har blivit falskt bannlyst från sidan, så kan du kontakta en moderator eller administrator."
 
@@ -1384,8 +1360,8 @@ msgid "Chat Rules"
 msgstr "Chatt Regler"
 
 #: /views/partials/info.handlebars
-msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
-msgstr "Håll chatten civil. Du får ej trakassera någon, eller använda homofobiskt/transfobiskt/funkofobiskt språk."
+msgid "Keep chat civil. Don't be a jerk."
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No hate speech. This includes emoji/symbols/ASCII art."
@@ -1418,6 +1394,10 @@ msgstr "Inget symbolik vilket bryter mot kanvas eller chatt regler (t.ex. NSFW A
 #: /views/partials/info.handlebars
 msgid "No personal information"
 msgstr "Inge personlig information"
+
+#: /views/partials/info.handlebars
+msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
+msgstr "Om du känner att en moderator har agerat olämpligt, snälla raportera det till en administrator."
 
 #: /views/partials/info.handlebars
 msgid "Links"
@@ -1807,8 +1787,8 @@ msgid "Banned user"
 msgstr "Bannlyste användare"
 
 #: /public/admin/admin.js
-msgid "Unbanned user ${username}"
-msgstr "Ångrade bannlysning hos ${username}"
+msgid "Unbanned user {username}"
+msgstr "Ångrade bannlysning hos {username}"
 
 #. Context: ban type
 #: /public/admin/admin.js
@@ -1911,16 +1891,16 @@ msgstr "Frivilig bannlyssnings längd: "
 
 #. Admin check. Example: type = 'username', arg = 'pxlsuser94'
 #: /public/admin/admin.js
-msgid "${type} ${arg} not found."
-msgstr "{type} ${arg} inte hittad."
+msgid "{type} {arg} not found."
+msgstr "{type} {arg} inte hittad."
 
 #: /public/admin/admin.js
 msgid "Unban Reason:"
 msgstr "Tog Bort Bannlyssning, Anledningar är:"
 
 #: /public/admin/admin.js
-msgid "Unbanning ${username}"
-msgstr "Tar Bort Bannlysning på ${username}"
+msgid "Unbanning {username}"
+msgstr "Tar Bort Bannlysning på {username}"
 
 #: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
 #: /public/include/user.js
@@ -2027,8 +2007,8 @@ msgid "none provided"
 msgstr "inga givna"
 
 #: /public/include/chat.js
-msgid "Purged by ${purge.initiator} with reason: ${reason}"
-msgstr "Utrensad av ${purge.initiator} med resonemangen: ${reason}"
+msgid "Purged by {initiator} with reason: {reason}"
+msgstr "Utrensad av {initiator} med resonemangen: {reason}"
 
 #: /public/include/chat.js
 msgid "External Link"
@@ -2115,8 +2095,8 @@ msgid "Enter a reason for your report"
 msgstr "Skriv in en anledning till din report"
 
 #: /public/include/chat.js
-msgid "You are reporting a chat message from ${reportTarget} with the content:"
-msgstr "Du raporterar ett chatt medellande från ${reportTarget} med innehållet:"
+msgid "You are reporting a chat message from {reportTarget} with the content:"
+msgstr "Du raporterar ett chatt medellande från {reportTarget} med innehållet:"
 
 #: /public/include/chat.js /public/include/lookup.js
 msgid "Sent report!"
@@ -2351,32 +2331,32 @@ msgid "just now"
 msgstr "just nu"
 
 #: /public/include/lookup.js
-msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
-msgstr "${hoursStr}:${minuteStr}:${secsStr} sen"
+msgid "{hoursStr}:{minuteStr}:{secsStr} ago"
+msgstr "{hoursStr}:{minuteStr}:{secsStr} sen"
 
 #: /public/include/lookup.js
 msgid "Discord"
 msgstr "Discord"
 
 #: /public/include/notifications.js
-msgid "Posted by ${notification.who}"
-msgstr "Utlagd av ${notification.who}"
+msgid "Posted by {who}"
+msgstr "Utlagd av {who}"
 
 #: /public/include/notifications.js
-msgid "Expires ${expiry}"
-msgstr "Går ut ${expiry}"
+msgid "Expires {expiry}"
+msgstr "Går ut {expiry}"
 
 #: /public/include/template.js
 msgid "There was an error getting the image"
 msgstr "Det uppstod ett fel vid erhållandet av bilden"
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr "Din nästa pixel kommer att vara tillgänglig inom ${delay} sekunder!"
+msgid "Your next pixel will be available in {delay} seconds!"
+msgstr "Din nästa pixel kommer att vara tillgänglig inom {delay} sekunder!"
 
 #: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr "Din nästa pixel har varit tillgänglig för ${alertDelay} sekunder!"
+msgid "Your next pixel has been available for {alertDelay} seconds!"
+msgstr "Din nästa pixel har varit tillgänglig för {alertDelay} sekunder!"
 
 #: /public/include/timer.js
 msgid "Your next pixel is available!"
@@ -2423,8 +2403,8 @@ msgid "Red"
 msgstr "Röd"
 
 #: /public/include/uiHelper.js
-msgid "A new ${type} report has been received."
-msgstr "En ny ${type} har blivit mottagen."
+msgid "A new {type} report has been received."
+msgstr "En ny {type} har blivit mottagen."
 
 #: /public/include/uiHelper.js
 msgid "Cannot fetch local files. Use the file selector in template settings."
@@ -2479,8 +2459,8 @@ msgid "You are permanently banned."
 msgstr "Du är permanent bannlyst."
 
 #: /public/include/user.js
-msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
-msgstr "Du är temporärt bannlyst och du är inte tillåten att placera tills ${timestamp}"
+msgid "You are temporarily banned and will not be allowed to place until {timestamp}"
+msgstr "Du är temporärt bannlyst och du är inte tillåten att placera tills {timestamp}"
 
 #: /public/include/user.js
 msgid "You can contact us using one of the links in the info menu."
@@ -2529,6 +2509,36 @@ msgstr "Klicka här för att fortsätta."
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alert"
+
+#~ msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
+#~ msgstr "Välkommen till pxls.space! Pxls är ett fler-spelare online samarbets kanvas baserad på <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">/r/place</a>, som låter dig göra vad som helst som du kan komma på, en pixel åt gången. Gå med hundratals av andra spelare i Pxls gemensamheten och gör fantastiska konstverk tillsammans som ett team, eller solo."
+
+#~ msgid "The best place to reach staff and fellow community is in the discord!"
+#~ msgstr "Den bästa platsen att nå moderatorerna och vårt gemenskap i discord servern!"
+
+#~ msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
+#~ msgstr "Kolla på våra sociala medier sidor, och snälla ta den tid som behövs för att läsa igenom reglerna vi har. Ha kul med görandet av (eller att ändra) konst!"
+
+#~ msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
+#~ msgstr "Vi är stolta över att försöka hålla en öppen kanvas för alla, fri från yttre störning på vår sida, speciellt censoring. Men, för vårt gemenskaps bästa och på grund av vår egen tro, snälla acceptera oc följ dem följande reglerna:"
+
+#~ msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
+#~ msgstr "Inga hatfyllda bilder eller förkränkande språk. Detta inkluderar, men är inte begränsat till ord som <i>f****t</i>, <i>n****r</i>, etc; ävensom Hakkorset, Hammare och Skäran, eller andra symboler av terrorism."
+
+#~ msgid "No NSFW or NSFL content."
+#~ msgstr "Inget NSFW (Not Safe For Work) eller NSFL (Not Safe For Life) innehåll."
+
+#~ msgid "No nudity or otherwise sexually explicit content"
+#~ msgstr "Ingen nakenhet eller annars sexuellt explicit innehåll"
+
+#~ msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
+#~ msgstr "Inga kvinno-presenterande nippel/bara bröst, genitalier eller sexuella vätskor"
+
+#~ msgid "No sexual imagery/erotica"
+#~ msgstr "Inget sexuellt eller erotiska konstverk"
+
+#~ msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+#~ msgstr "Håll chatten civil. Du får ej trakassera någon, eller använda homofobiskt/transfobiskt/funkofobiskt språk."
 
 #~ msgid "Subreddit"
 #~ msgstr "Subreddit"

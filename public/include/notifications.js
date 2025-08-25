@@ -1,6 +1,7 @@
 const { socket } = require('./socket');
 const { ls } = require('./storage');
 const { chat } = require('./chat');
+const { i18n } = require('./helpers');
 
 module.exports.notifications = (function() {
   const self = {
@@ -57,10 +58,10 @@ module.exports.notifications = (function() {
         crel('header', { class: 'notification-title' }, crel('h2', notification.title)),
         crel('div', { class: 'notification-body' }, chat.processMessage(notification.content)),
         crel('footer', { class: 'notification-footer' },
-          notification.who ? document.createTextNode(__(`Posted by ${notification.who}`)) : null,
+          notification.who ? document.createTextNode(i18n(__('Posted by {who}'), {who: notification.who})) : null,
           notification.expiry !== 0 ? crel('span', { class: 'notification-expiry float-left' },
             crel('i', { class: 'far fa-clock fa-is-left' }),
-            crel('span', { title: moment.unix(notification.expiry).format('MMMM DD, YYYY, hh:mm:ss A') }, __(`Expires ${expiry}`))
+            crel('span', { title: moment.unix(notification.expiry).format('MMMM DD, YYYY, hh:mm:ss A') }, i18n(__('Expires {expiry}'), {expiry: expiry}))
           ) : null
         )
       );

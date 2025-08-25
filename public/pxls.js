@@ -19,6 +19,10 @@ if (window.App !== undefined) {
   instaban = true;
 }
 window.__ = (translatableString) => translatableString;
+window.__ = (singular, plural) => singular;
+window._c = (context, translatableString) => translatableString;
+window._c = (context, singular, plural) => singular;
+
 window.App = (function() {
   const { ls, ss } = require('./include/storage');
 

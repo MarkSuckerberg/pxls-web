@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2025-08-25T15:32:08.074Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -1312,45 +1312,24 @@ msgid "Welcome!"
 msgstr "Laipni lūdzam!"
 
 #: /views/partials/info.handlebars
-msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
-msgstr "Esiet sveicināti uz pxls.space! Pxls ir tiešsaistes vairāku spēlētāju sadarbības kanva, kura ļauj jums izveidot jebko, ko varat iedomāties, pa vienam pikselim reizē. Pievienojieties simtiem citu spēlētāju Pxls kopienā un veidojiet apbrīnojamus mākslas darbus kopā kā komanda, vai viens pats."
-
-# project maintainers = staff, makes sense right?
-#: /views/partials/info.handlebars
-msgid "The best place to reach staff and fellow community is in the discord!"
-msgstr "Labākā vieta, kur sazināties ar projekta uzturētājiem un citiem, ir discord!"
-
-#: /views/partials/info.handlebars
-msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-msgstr "Apskatiet mūsu sociālo mēdiju lapas un lūdzu veltiet laiku lai iepazītos ar noteikumiem zemāk. Izklaidējieties veidojot (vai mainot) mākslas darbus!"
-
-#: /views/partials/info.handlebars
 msgid "Canvas Rules"
 msgstr "Kanvas Noteikumi"
 
 #: /views/partials/info.handlebars
-msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
-msgstr "Mēs lepojamies ar to, ka cenšamies visiem nodrošināt atvērtu kanvu brīvu no ārējās iejaukšanās un jo īpaši cenzūras. Tomēr kopienas labā un mūsu pašu pārliecības dēļ, lūdzu, atzīstiet un ievērojiet šādas vadlīnijas:"
+msgid "<b>PLEASE BE 18+.</b> This isn't specifically a NSFW canvas, but this is for adults only."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
-msgstr "Nekādu naidīgu attēlu vai nievājošas runas. Tas ietver tādus vārdus kā, bet ne tikai, <i>f****t</i>, <i>n****r</i> utt., kā arī svastika un jebkādi terorisma simboli."
+msgid "No hateful imagery or derogatory speech."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No NSFW or NSFL content."
-msgstr "Nekāda NSFW vai NSFW satura (\"nav drošs priekš darba\" un \"nav drošs priekš dzīves\")."
+msgid "No overly NSFW or NSFL content."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No nudity or otherwise sexually explicit content"
-msgstr "Nekāda kailuma vai citādi seksuāla satura"
-
-#: /views/partials/info.handlebars
-msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
-msgstr "Nekādu sieviešu krūtsgalu/kailu krūšu, ģenitāliju, seksuālo šķidrumu"
-
-#: /views/partials/info.handlebars
-msgid "No sexual imagery/erotica"
-msgstr "Nekādu seksuālu attēlu/erotikas"
+msgid "No excessive nudity or otherwise sexually explicit content"
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No excessive blood or otherwise obscene/shocking content"
@@ -1377,10 +1356,6 @@ msgid "Staff have final say in any rule disputes"
 msgstr "Moderatoriem ir pēdējais vārds jebkādos strīdos par noteikumiem"
 
 #: /views/partials/info.handlebars
-msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
-msgstr "Ja uzskatāt, ka moderators ir rīkojies neatbilstoši, lūdzu, ziņojiet par to administratoram."
-
-#: /views/partials/info.handlebars
 msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
 msgstr "Ja uzskatāt, ka esat nobanots bez pamatota iemesla, varat sazināties ar moderatoru vai administratoru."
 
@@ -1389,8 +1364,8 @@ msgid "Chat Rules"
 msgstr "Čata Noteikumi"
 
 #: /views/partials/info.handlebars
-msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
-msgstr "Esiet pieklājīgi čatā. Nedrīkst uzmākties un apvainot citus. Aizliegts iztekties veidā kas ir homofobisks/transfobisks vai pret invalīdiem."
+msgid "Keep chat civil. Don't be a jerk."
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No hate speech. This includes emoji/symbols/ASCII art."
@@ -1423,6 +1398,10 @@ msgstr "Nekādu simbolu kas pārkāpj kanvas vai čata noteikumus (piemēram NSF
 #: /views/partials/info.handlebars
 msgid "No personal information"
 msgstr "Nekādas personīgās informācijas"
+
+#: /views/partials/info.handlebars
+msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
+msgstr "Ja uzskatāt, ka moderators ir rīkojies neatbilstoši, lūdzu, ziņojiet par to administratoram."
 
 #: /views/partials/info.handlebars
 msgid "Links"
@@ -1812,7 +1791,7 @@ msgid "Banned user"
 msgstr ""
 
 #: /public/admin/admin.js
-msgid "Unbanned user ${username}"
+msgid "Unbanned user {username}"
 msgstr ""
 
 #. Context: ban type
@@ -1916,7 +1895,7 @@ msgstr ""
 
 #. Admin check. Example: type = 'username', arg = 'pxlsuser94'
 #: /public/admin/admin.js
-msgid "${type} ${arg} not found."
+msgid "{type} {arg} not found."
 msgstr ""
 
 #: /public/admin/admin.js
@@ -1924,7 +1903,7 @@ msgid "Unban Reason:"
 msgstr ""
 
 #: /public/admin/admin.js
-msgid "Unbanning ${username}"
+msgid "Unbanning {username}"
 msgstr ""
 
 #: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
@@ -2032,8 +2011,8 @@ msgid "none provided"
 msgstr "nav norādīts"
 
 #: /public/include/chat.js
-msgid "Purged by ${purge.initiator} with reason: ${reason}"
-msgstr "${purge.initiator} izdzēsa ar iemeslu: ${reason}"
+msgid "Purged by {initiator} with reason: {reason}"
+msgstr "{initiator} izdzēsa ar iemeslu: {reason}"
 
 #: /public/include/chat.js
 msgid "External Link"
@@ -2120,7 +2099,7 @@ msgid "Enter a reason for your report"
 msgstr "Ievadiet iemeslu jūsu sūdzībai"
 
 #: /public/include/chat.js
-msgid "You are reporting a chat message from ${reportTarget} with the content:"
+msgid "You are reporting a chat message from {reportTarget} with the content:"
 msgstr ""
 
 #: /public/include/chat.js /public/include/lookup.js
@@ -2356,32 +2335,32 @@ msgid "just now"
 msgstr "tikko"
 
 #: /public/include/lookup.js
-msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
-msgstr "pirms ${hoursStr}:${minuteStr}:${secsStr}"
+msgid "{hoursStr}:{minuteStr}:{secsStr} ago"
+msgstr "pirms {minuteStr}:{secsStr}:{secsStr}"
 
 #: /public/include/lookup.js
 msgid "Discord"
 msgstr "Discord"
 
 #: /public/include/notifications.js
-msgid "Posted by ${notification.who}"
-msgstr "Atsūtīja ${notification.who}"
+msgid "Posted by {who}"
+msgstr "Atsūtīja {who}"
 
 #: /public/include/notifications.js
-msgid "Expires ${expiry}"
-msgstr "Beidzas ${expiry}"
+msgid "Expires {expiry}"
+msgstr "Beidzas {expiry}"
 
 #: /public/include/template.js
 msgid "There was an error getting the image"
 msgstr "Notika kļūda iegūstot attēlu"
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr "Jūsu nākošais pikselis būs pieejams pēc ${delay} sekundēm!"
+msgid "Your next pixel will be available in {delay} seconds!"
+msgstr "Jūsu nākošais pikselis būs pieejams pēc {delay} sekundēm!"
 
 #: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr "Jūsu nākošais pikselis bija pieejams pirms ${alertDelay} sekundēm!"
+msgid "Your next pixel has been available for {alertDelay} seconds!"
+msgstr "Jūsu nākošais pikselis bija pieejams pirms {alertDelay} sekundēm!"
 
 #: /public/include/timer.js
 msgid "Your next pixel is available!"
@@ -2428,7 +2407,7 @@ msgid "Red"
 msgstr "Sarkans"
 
 #: /public/include/uiHelper.js
-msgid "A new ${type} report has been received."
+msgid "A new {type} report has been received."
 msgstr ""
 
 #: /public/include/uiHelper.js
@@ -2484,8 +2463,8 @@ msgid "You are permanently banned."
 msgstr "Jūs esat banots uz bezgalīgu laiku."
 
 #: /public/include/user.js
-msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
-msgstr "Jūs esat īslaicīgā banā un nevarēsiet likt līdz ${timestamp}"
+msgid "You are temporarily banned and will not be allowed to place until {timestamp}"
+msgstr "Jūs esat īslaicīgā banā un nevarēsiet likt līdz {timestamp}"
 
 #: /public/include/user.js
 msgid "You can contact us using one of the links in the info menu."
@@ -2534,6 +2513,37 @@ msgstr ""
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Brīdinājums"
+
+#~ msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
+#~ msgstr "Esiet sveicināti uz pxls.space! Pxls ir tiešsaistes vairāku spēlētāju sadarbības kanva, kura ļauj jums izveidot jebko, ko varat iedomāties, pa vienam pikselim reizē. Pievienojieties simtiem citu spēlētāju Pxls kopienā un veidojiet apbrīnojamus mākslas darbus kopā kā komanda, vai viens pats."
+
+# project maintainers = staff, makes sense right?
+#~ msgid "The best place to reach staff and fellow community is in the discord!"
+#~ msgstr "Labākā vieta, kur sazināties ar projekta uzturētājiem un citiem, ir discord!"
+
+#~ msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
+#~ msgstr "Apskatiet mūsu sociālo mēdiju lapas un lūdzu veltiet laiku lai iepazītos ar noteikumiem zemāk. Izklaidējieties veidojot (vai mainot) mākslas darbus!"
+
+#~ msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
+#~ msgstr "Mēs lepojamies ar to, ka cenšamies visiem nodrošināt atvērtu kanvu brīvu no ārējās iejaukšanās un jo īpaši cenzūras. Tomēr kopienas labā un mūsu pašu pārliecības dēļ, lūdzu, atzīstiet un ievērojiet šādas vadlīnijas:"
+
+#~ msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
+#~ msgstr "Nekādu naidīgu attēlu vai nievājošas runas. Tas ietver tādus vārdus kā, bet ne tikai, <i>f****t</i>, <i>n****r</i> utt., kā arī svastika un jebkādi terorisma simboli."
+
+#~ msgid "No NSFW or NSFL content."
+#~ msgstr "Nekāda NSFW vai NSFW satura (\"nav drošs priekš darba\" un \"nav drošs priekš dzīves\")."
+
+#~ msgid "No nudity or otherwise sexually explicit content"
+#~ msgstr "Nekāda kailuma vai citādi seksuāla satura"
+
+#~ msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
+#~ msgstr "Nekādu sieviešu krūtsgalu/kailu krūšu, ģenitāliju, seksuālo šķidrumu"
+
+#~ msgid "No sexual imagery/erotica"
+#~ msgstr "Nekādu seksuālu attēlu/erotikas"
+
+#~ msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+#~ msgstr "Esiet pieklājīgi čatā. Nedrīkst uzmākties un apvainot citus. Aizliegts iztekties veidā kas ir homofobisks/transfobisks vai pret invalīdiem."
 
 #~ msgid "Subreddit"
 #~ msgstr "Subreddits"

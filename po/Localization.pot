@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:42:20.086Z\n"
+"POT-Creation-Date: 2025-08-25T15:35:27.291Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -1335,43 +1335,23 @@ msgid "Welcome!"
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "The best place to reach staff and fellow community is in the discord!"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-msgstr ""
-
-#: /views/partials/info.handlebars
 msgid "Canvas Rules"
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
+msgid "<b>PLEASE BE 18+.</b> This isn't specifically a NSFW canvas, but this is for adults only."
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
+msgid "No hateful imagery or derogatory speech."
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No NSFW or NSFL content."
+msgid "No overly NSFW or NSFL content."
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No nudity or otherwise sexually explicit content"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No sexual imagery/erotica"
+msgid "No excessive nudity or otherwise sexually explicit content"
 msgstr ""
 
 #: /views/partials/info.handlebars
@@ -1400,11 +1380,6 @@ msgid "Staff have final say in any rule disputes"
 msgstr ""
 
 #: /views/partials/info.handlebars
-#: /views/partials/info.handlebars
-msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
-msgstr ""
-
-#: /views/partials/info.handlebars
 msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
 msgstr ""
 
@@ -1413,7 +1388,7 @@ msgid "Chat Rules"
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+msgid "Keep chat civil. Don't be a jerk."
 msgstr ""
 
 #: /views/partials/info.handlebars
@@ -1446,6 +1421,10 @@ msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No personal information"
+msgstr ""
+
+#: /views/partials/info.handlebars
+msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
 msgstr ""
 
 #: /views/partials/info.handlebars
@@ -1866,7 +1845,7 @@ msgid "Banned user"
 msgstr ""
 
 #: /public/admin/admin.js
-msgid "Unbanned user ${username}"
+msgid "Unbanned user {username}"
 msgstr ""
 
 #. Context: ban type
@@ -1978,7 +1957,7 @@ msgstr ""
 
 #. Admin check. Example: type = 'username', arg = 'pxlsuser94'
 #: /public/admin/admin.js
-msgid "${type} ${arg} not found."
+msgid "{type} {arg} not found."
 msgstr ""
 
 #: /public/admin/admin.js
@@ -1986,7 +1965,7 @@ msgid "Unban Reason:"
 msgstr ""
 
 #: /public/admin/admin.js
-msgid "Unbanning ${username}"
+msgid "Unbanning {username}"
 msgstr ""
 
 #: /public/admin/admin.js
@@ -2096,7 +2075,7 @@ msgid "none provided"
 msgstr ""
 
 #: /public/include/chat.js
-msgid "Purged by ${purge.initiator} with reason: ${reason}"
+msgid "Purged by {initiator} with reason: {reason}"
 msgstr ""
 
 #: /public/include/chat.js
@@ -2185,7 +2164,7 @@ msgid "Enter a reason for your report"
 msgstr ""
 
 #: /public/include/chat.js
-msgid "You are reporting a chat message from ${reportTarget} with the content:"
+msgid "You are reporting a chat message from {reportTarget} with the content:"
 msgstr ""
 
 #: /public/include/chat.js
@@ -2423,7 +2402,7 @@ msgid "just now"
 msgstr ""
 
 #: /public/include/lookup.js
-msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
+msgid "{hoursStr}:{minuteStr}:{secsStr} ago"
 msgstr ""
 
 #: /public/include/lookup.js
@@ -2431,11 +2410,11 @@ msgid "Discord"
 msgstr ""
 
 #: /public/include/notifications.js
-msgid "Posted by ${notification.who}"
+msgid "Posted by {who}"
 msgstr ""
 
 #: /public/include/notifications.js
-msgid "Expires ${expiry}"
+msgid "Expires {expiry}"
 msgstr ""
 
 #: /public/include/template.js
@@ -2443,11 +2422,11 @@ msgid "There was an error getting the image"
 msgstr ""
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
+msgid "Your next pixel will be available in {delay} seconds!"
 msgstr ""
 
 #: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
+msgid "Your next pixel has been available for {alertDelay} seconds!"
 msgstr ""
 
 #: /public/include/timer.js
@@ -2495,7 +2474,7 @@ msgid "Red"
 msgstr ""
 
 #: /public/include/uiHelper.js
-msgid "A new ${type} report has been received."
+msgid "A new {type} report has been received."
 msgstr ""
 
 #: /public/include/uiHelper.js
@@ -2551,7 +2530,7 @@ msgid "You are permanently banned."
 msgstr ""
 
 #: /public/include/user.js
-msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
+msgid "You are temporarily banned and will not be allowed to place until {timestamp}"
 msgstr ""
 
 #: /public/include/user.js

@@ -2,6 +2,7 @@ const { settings } = require('./settings');
 const { nativeNotifications } = require('./nativeNotifications');
 const { uiHelper } = require('./uiHelper');
 const { socket } = require('./socket');
+const { i18n } = require('./helpers');
 
 // this takes care of the countdown timer
 module.exports.timer = (function() {
@@ -39,7 +40,7 @@ module.exports.timer = (function() {
         let notif;
         const delay = Math.abs(alertDelay);
         if (!document.hasFocus()) {
-          notif = nativeNotifications.maybeShow(__(`Your next pixel will be available in ${delay} seconds!`));
+          notif = nativeNotifications.maybeShow(i18n(__('Your next pixel will be available in {delay} seconds!'), {delay: delay}));
         }
         setTimeout(() => {
           uiHelper.setPlaceableText(uiHelper.getAvailable() + 1);
@@ -85,7 +86,7 @@ module.exports.timer = (function() {
           if (!this.runningTimer) {
             self.playAudio();
             if (!document.hasFocus()) {
-              const notif = nativeNotifications.maybeShow(__(`Your pixels have been full for ${alertDelay} seconds!`));
+              const notif = nativeNotifications.maybeShow(i18n(__('Your next pixel has been available for {alertDelay} seconds!'), {alertDelay: alertDelay}));
               if (notif) {
                 $(window).one('pxls:ack:place', () => notif.close());
               }
@@ -103,7 +104,7 @@ module.exports.timer = (function() {
       if (!self.hasFiredNotification) {
         self.playAudio();
         if (!document.hasFocus()) {
-          const notif = nativeNotifications.maybeShow(__('Your pixels are full!'));
+          const notif = nativeNotifications.maybeShow(__('Your next pixel is available!'));
           if (notif) {
             $(window).one('pxls:ack:place', () => notif.close());
           }

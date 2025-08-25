@@ -5,6 +5,7 @@ const { serviceWorkerHelper } = require('./serviceworkers');
 const { settings } = require('./settings');
 const { modal } = require('./modal');
 const { TH } = require('./typeahead');
+const { i18n } = require('./helpers');
 let uiHelper;
 let user;
 let place;
@@ -1584,7 +1585,7 @@ const chat = (function() {
     _markMessagePurged: (elem, purge) => {
       elem.classList.add('purged');
       const reason = purge.reason || __('none provided');
-      elem.setAttribute('title', __(`Purged by ${purge.initiator} with reason: ${reason}`));
+      elem.setAttribute('title', i18n(__('Purged by {initiator} with reason: {reason}'), {reason: reason, initiator: purge.initiator}));
       elem.dataset.purgedBy = purge.initiator;
     },
     _markMessageShadowBanned: (elem) => {
@@ -1952,7 +1953,7 @@ const chat = (function() {
                 // NOTE ([  ]): Using $ here instead of crel because the content
                 // contains HTML as a string (reportTarget and reportMessage).
                 $('<p>').css('font-size', '1rem !important;').html(
-                  __(`You are reporting a chat message from ${reportTarget} with the content:`) + reportMessage
+                  i18n(__('You are reporting a chat message from {reportTarget} with the content:'), {reportTarget: reportTarget}) + reportMessage
                 )[0],
                 textArea,
                 crel('div', { style: 'text-align: right' },

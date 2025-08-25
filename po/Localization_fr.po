@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2025-08-25T15:32:08.074Z\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -1302,44 +1302,24 @@ msgid "Welcome!"
 msgstr "Bienvenue !"
 
 #: /views/partials/info.handlebars
-msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
-msgstr "Bienvenue sur pxls.space ! Pxls est un canvas collaboratif en ligne qui te permet de créer tout ce que tu peux imaginer, pixel après pixel. Rejoins des centaines de joueurs dans la communauté de Pxls et crée des œuvres d'art en équipe ou en solo."
-
-#: /views/partials/info.handlebars
-msgid "The best place to reach staff and fellow community is in the discord!"
-msgstr "Le meilleur endroit pour contacter le staff ou d'autres membres de la communauté est le serveur Discord !"
-
-#: /views/partials/info.handlebars
-msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-msgstr "Jette un œil à nos réseaux sociaux, et n'oublie pas de lire les règles ci-dessous. Profite bien du site, et amuse-toi bien à créer (ou modifier) de l'art !"
-
-#: /views/partials/info.handlebars
 msgid "Canvas Rules"
 msgstr "Règles du canvas"
 
 #: /views/partials/info.handlebars
-msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
-msgstr "Nous mettons un point d'honneur à garder un canvas ouvert à tous sans interférences de notre part, et surtout sans censure. Toutefois, pour le bien de la communauté, nous te remercions de lire et obéir les quelques consignes suivantes :"
+msgid "<b>PLEASE BE 18+.</b> This isn't specifically a NSFW canvas, but this is for adults only."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
-msgstr "Pas d'imagerie haineuse ou propos dérogatoires. Ceci inclut (liste non exhaustive) des mots tels que <i>f****t</i>, <i>pédé</i>, <i>n****r</i>, etc, quelle que soit la langue utilisée ; ainsi que la croix gammée et tout symbole de terrorisme."
+msgid "No hateful imagery or derogatory speech."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No NSFW or NSFL content."
-msgstr "Pas de contenu NSFW ou NSFL (Not Safe For Work ou Not Safe For Life, autrement dit, indécent)"
+msgid "No overly NSFW or NSFL content."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No nudity or otherwise sexually explicit content"
-msgstr "Pas de nudité ou autre contenu sexuellement explicite"
-
-#: /views/partials/info.handlebars
-msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
-msgstr "Pas de tétons féminins/seins nus, organes génitaux, fluides sexuels"
-
-#: /views/partials/info.handlebars
-msgid "No sexual imagery/erotica"
-msgstr "Pas d'imagerie pornographique/érotique"
+msgid "No excessive nudity or otherwise sexually explicit content"
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No excessive blood or otherwise obscene/shocking content"
@@ -1366,10 +1346,6 @@ msgid "Staff have final say in any rule disputes"
 msgstr "Le staff a le dernier mot dans tout débat concernant les règles"
 
 #: /views/partials/info.handlebars
-msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
-msgstr "Si tu penses qu'un modérateur a agi de façon inappropriée, merci de le signaler à un administrateur."
-
-#: /views/partials/info.handlebars
 msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
 msgstr "Si tu penses avoir été banni à tort, tu peux contacter un modérateur ou un administrateur."
 
@@ -1378,8 +1354,8 @@ msgid "Chat Rules"
 msgstr "Règles du chat"
 
 #: /views/partials/info.handlebars
-msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
-msgstr "Garde le chat civil. Pas de harcèlement ou de propos homophobes/transphobes/dénigrant envers les personnes handicapées."
+msgid "Keep chat civil. Don't be a jerk."
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No hate speech. This includes emoji/symbols/ASCII art."
@@ -1412,6 +1388,10 @@ msgstr "Pas de symboles qui enfreignent les règles du canvas ou du chat (par ex
 #: /views/partials/info.handlebars
 msgid "No personal information"
 msgstr "Pas d'information personnelle"
+
+#: /views/partials/info.handlebars
+msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
+msgstr "Si tu penses qu'un modérateur a agi de façon inappropriée, merci de le signaler à un administrateur."
 
 #: /views/partials/info.handlebars
 msgid "Links"
@@ -1801,8 +1781,8 @@ msgid "Banned user"
 msgstr "L'utilisateur a été banni"
 
 #: /public/admin/admin.js
-msgid "Unbanned user ${username}"
-msgstr "L'utilisateur ${username} n'est plus banni"
+msgid "Unbanned user {username}"
+msgstr "L'utilisateur {username} n'est plus banni"
 
 #. Context: ban type
 #: /public/admin/admin.js
@@ -1905,16 +1885,16 @@ msgstr ""
 
 #. Admin check. Example: type = 'username', arg = 'pxlsuser94'
 #: /public/admin/admin.js
-msgid "${type} ${arg} not found."
-msgstr "${type} ${arg} non trouvé"
+msgid "{type} {arg} not found."
+msgstr "{type} {arg} non trouvé"
 
 #: /public/admin/admin.js
 msgid "Unban Reason:"
 msgstr "Raison de la révocation du bannissement"
 
 #: /public/admin/admin.js
-msgid "Unbanning ${username}"
-msgstr "Révocation du bannissement de ${username}"
+msgid "Unbanning {username}"
+msgstr "Révocation du bannissement de {username}"
 
 #: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
 #: /public/include/user.js
@@ -2021,8 +2001,8 @@ msgid "none provided"
 msgstr "aucune donnée"
 
 #: /public/include/chat.js
-msgid "Purged by ${purge.initiator} with reason: ${reason}"
-msgstr "Purgé par ${purge.initiator} pour la raison: ${reason}"
+msgid "Purged by {initiator} with reason: {reason}"
+msgstr "Purgé par {initiator} pour la raison: {reason}"
 
 #: /public/include/chat.js
 msgid "External Link"
@@ -2109,7 +2089,7 @@ msgid "Enter a reason for your report"
 msgstr "Entre une raison pour ton signalement"
 
 #: /public/include/chat.js
-msgid "You are reporting a chat message from ${reportTarget} with the content:"
+msgid "You are reporting a chat message from {reportTarget} with the content:"
 msgstr ""
 
 #: /public/include/chat.js /public/include/lookup.js
@@ -2345,32 +2325,32 @@ msgid "just now"
 msgstr "à l'instant"
 
 #: /public/include/lookup.js
-msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
-msgstr "il y a ${hoursStr}:${minuteStr}:${secsStr}"
+msgid "{hoursStr}:{minuteStr}:{secsStr} ago"
+msgstr "il y a {minuteStr}:{secsStr}:{secsStr}"
 
 #: /public/include/lookup.js
 msgid "Discord"
 msgstr "Discord"
 
 #: /public/include/notifications.js
-msgid "Posted by ${notification.who}"
-msgstr "Posté par ${notification.who}"
+msgid "Posted by {who}"
+msgstr "Posté par {who}"
 
 #: /public/include/notifications.js
-msgid "Expires ${expiry}"
-msgstr "Expire à ${expiry}"
+msgid "Expires {expiry}"
+msgstr "Expire à {expiry}"
 
 #: /public/include/template.js
 msgid "There was an error getting the image"
 msgstr "Erreur à l'obtention de l'image"
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr "Ton prochain pixel sera disponible dans ${delay} secondes !"
+msgid "Your next pixel will be available in {delay} seconds!"
+msgstr "Ton prochain pixel sera disponible dans {delay} secondes !"
 
 #: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr "Ton nouveau pixel est disponible depuis ${alertDelay} secondes !"
+msgid "Your next pixel has been available for {alertDelay} seconds!"
+msgstr "Ton nouveau pixel est disponible depuis {alertDelay} secondes !"
 
 #: /public/include/timer.js
 msgid "Your next pixel is available!"
@@ -2417,7 +2397,7 @@ msgid "Red"
 msgstr "Rouge"
 
 #: /public/include/uiHelper.js
-msgid "A new ${type} report has been received."
+msgid "A new {type} report has been received."
 msgstr ""
 
 #: /public/include/uiHelper.js
@@ -2473,8 +2453,8 @@ msgid "You are permanently banned."
 msgstr "Tu es banni définitivement."
 
 #: /public/include/user.js
-msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
-msgstr "Tu es banni temporairement et ne pourra pas placer de pixel jusqu'à ${timestamp}"
+msgid "You are temporarily banned and will not be allowed to place until {timestamp}"
+msgstr "Tu es banni temporairement et ne pourra pas placer de pixel jusqu'à {timestamp}"
 
 #: /public/include/user.js
 msgid "You can contact us using one of the links in the info menu."
@@ -2523,6 +2503,36 @@ msgstr ""
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alerte"
+
+#~ msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
+#~ msgstr "Bienvenue sur pxls.space ! Pxls est un canvas collaboratif en ligne qui te permet de créer tout ce que tu peux imaginer, pixel après pixel. Rejoins des centaines de joueurs dans la communauté de Pxls et crée des œuvres d'art en équipe ou en solo."
+
+#~ msgid "The best place to reach staff and fellow community is in the discord!"
+#~ msgstr "Le meilleur endroit pour contacter le staff ou d'autres membres de la communauté est le serveur Discord !"
+
+#~ msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
+#~ msgstr "Jette un œil à nos réseaux sociaux, et n'oublie pas de lire les règles ci-dessous. Profite bien du site, et amuse-toi bien à créer (ou modifier) de l'art !"
+
+#~ msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
+#~ msgstr "Nous mettons un point d'honneur à garder un canvas ouvert à tous sans interférences de notre part, et surtout sans censure. Toutefois, pour le bien de la communauté, nous te remercions de lire et obéir les quelques consignes suivantes :"
+
+#~ msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
+#~ msgstr "Pas d'imagerie haineuse ou propos dérogatoires. Ceci inclut (liste non exhaustive) des mots tels que <i>f****t</i>, <i>pédé</i>, <i>n****r</i>, etc, quelle que soit la langue utilisée ; ainsi que la croix gammée et tout symbole de terrorisme."
+
+#~ msgid "No NSFW or NSFL content."
+#~ msgstr "Pas de contenu NSFW ou NSFL (Not Safe For Work ou Not Safe For Life, autrement dit, indécent)"
+
+#~ msgid "No nudity or otherwise sexually explicit content"
+#~ msgstr "Pas de nudité ou autre contenu sexuellement explicite"
+
+#~ msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
+#~ msgstr "Pas de tétons féminins/seins nus, organes génitaux, fluides sexuels"
+
+#~ msgid "No sexual imagery/erotica"
+#~ msgstr "Pas d'imagerie pornographique/érotique"
+
+#~ msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+#~ msgstr "Garde le chat civil. Pas de harcèlement ou de propos homophobes/transphobes/dénigrant envers les personnes handicapées."
 
 #~ msgid "Subreddit"
 #~ msgstr "Subreddit"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2025-08-25T15:32:08.074Z\n"
 "Language: fi\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -1302,44 +1302,24 @@ msgid "Welcome!"
 msgstr "Tervetuloa!"
 
 #: /views/partials/info.handlebars
-msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
-msgstr "Tervetuloa pxls.space:een! Pxls on monen pelaajan yhteistyöllinen nettikanvaasi, joka perustuu Redditin <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> -tapahtumaan vuodelta 2017. joka mahdollistaq minkä tahansi huviteltavissasi olvean luomisen pikseli kerrallaan. Liity satojen muiden pelaajien kanssa Pxls yhteisöön ja luo mahtavia taideteoksia yhdessä joukkueena, tai yksin."
-
-#: /views/partials/info.handlebars
-msgid "The best place to reach staff and fellow community is in the discord!"
-msgstr "Paras paikka saavuttaa henkilökunta ja yhteisön jäseniä on Discordissa!"
-
-#: /views/partials/info.handlebars
-msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-msgstr "Käy katsomassa sosiaalisen median sivumme, ja ole hyvä ja lue säännöt alapuolella. Pidä hauskaa luodessasi (tai muuttaessasi) taidetta!"
-
-#: /views/partials/info.handlebars
 msgid "Canvas Rules"
 msgstr "Kanvaasin Säännöt"
 
 #: /views/partials/info.handlebars
-msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
-msgstr "Olemme ylpeitä yrittäessämme pitää avoimen kanvaasin puhtaana ulkoisista häiriöistä meidän osaltamme, etenkin sensoroinnista. Kuitenkin, yhteisön hyväksi ja uskomustemme puolseta, ole hyvä ja huomioi ja noudata seuraavia ohjeita:"
+msgid "<b>PLEASE BE 18+.</b> This isn't specifically a NSFW canvas, but this is for adults only."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
-msgstr "Ei vihanomaista kuvantamista tai halventavaa puhetta. Tämä sisältää mutta ei ole rajattu sanoihin kuten <i>f****t</i>, <i>n****r</i>, jne; mukaanlukien Swastika, Vasara ja Sirppi, ja mitkä tahansa muut terrorismin symbolit."
+msgid "No hateful imagery or derogatory speech."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No NSFW or NSFL content."
-msgstr "Ei NSFW tai NSFL sisältöä."
+msgid "No overly NSFW or NSFL content."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No nudity or otherwise sexually explicit content"
-msgstr "Ei alastomuutta tai muuten seksuaalista sisältöä"
-
-#: /views/partials/info.handlebars
-msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
-msgstr "Ei naista-esittäviä nännejä/paljaita rintoja, sukuelimiä, seksuaalisia nesteitä"
-
-#: /views/partials/info.handlebars
-msgid "No sexual imagery/erotica"
-msgstr "Ei seksuaalista kuvantamista/erotiikkaa"
+msgid "No excessive nudity or otherwise sexually explicit content"
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No excessive blood or otherwise obscene/shocking content"
@@ -1366,10 +1346,6 @@ msgid "Staff have final say in any rule disputes"
 msgstr "Henkilökunnalla on suurin päätösvalta kaikissa sääntöriidoissa"
 
 #: /views/partials/info.handlebars
-msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
-msgstr "Jos tunnet moderaattorin käyttäytyneen epäsopivasti, ole hyvä ja ilmoita asiasta järjestelmänvalvojalle."
-
-#: /views/partials/info.handlebars
 msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
 msgstr "Jos uskot virheellisesti saaneesi porttikiellon voit ottaa yhteyttä moderaattoriin tai järjestelmänvalvojaan."
 
@@ -1378,8 +1354,8 @@ msgid "Chat Rules"
 msgstr "Chatin Säännöt"
 
 #: /views/partials/info.handlebars
-msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
-msgstr "Pidä chatti säädyllisenä. Ei haukkumista tai homophobista/transphobista/disabliststa kielenkäyttöä."
+msgid "Keep chat civil. Don't be a jerk."
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No hate speech. This includes emoji/symbols/ASCII art."
@@ -1412,6 +1388,10 @@ msgstr "Ei symbologiaa joka rikkoo kanvaasin tai chatin sääntöjä (esim. NSFW
 #: /views/partials/info.handlebars
 msgid "No personal information"
 msgstr "Ei henkilökohtaista informaatiota"
+
+#: /views/partials/info.handlebars
+msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
+msgstr "Jos tunnet moderaattorin käyttäytyneen epäsopivasti, ole hyvä ja ilmoita asiasta järjestelmänvalvojalle."
 
 #: /views/partials/info.handlebars
 msgid "Links"
@@ -1801,8 +1781,8 @@ msgid "Banned user"
 msgstr "Porttikielletty käyttäjä"
 
 #: /public/admin/admin.js
-msgid "Unbanned user ${username}"
-msgstr "Poistettu porttikielto käyttäjältä ${username}"
+msgid "Unbanned user {username}"
+msgstr "Poistettu porttikielto käyttäjältä {username}"
 
 #. Context: ban type
 #: /public/admin/admin.js
@@ -1905,16 +1885,16 @@ msgstr "Muokattu porttikiellon pituus: "
 
 #. Admin check. Example: type = 'username', arg = 'pxlsuser94'
 #: /public/admin/admin.js
-msgid "${type} ${arg} not found."
-msgstr "${type} ${arg} ei löydetty."
+msgid "{type} {arg} not found."
+msgstr "{type} {arg} ei löydetty."
 
 #: /public/admin/admin.js
 msgid "Unban Reason:"
 msgstr "Porttikiellon Poistamisen Syy:"
 
 #: /public/admin/admin.js
-msgid "Unbanning ${username}"
-msgstr "Poistetaan porttikielto keyttäjältä ${username}"
+msgid "Unbanning {username}"
+msgstr "Poistetaan porttikielto keyttäjältä {username}"
 
 #: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
 #: /public/include/user.js
@@ -2021,8 +2001,8 @@ msgid "none provided"
 msgstr "ei mitään annettu"
 
 #: /public/include/chat.js
-msgid "Purged by ${purge.initiator} with reason: ${reason}"
-msgstr "Puhdistettu ${purge.initiator} toimesta syystä: ${reason}"
+msgid "Purged by {initiator} with reason: {reason}"
+msgstr "Puhdistettu {initiator} toimesta syystä: {reason}"
 
 #: /public/include/chat.js
 msgid "External Link"
@@ -2109,8 +2089,8 @@ msgid "Enter a reason for your report"
 msgstr "Anna syy ilmiannollesi"
 
 #: /public/include/chat.js
-msgid "You are reporting a chat message from ${reportTarget} with the content:"
-msgstr "Olet ilmiantamassa viestin käyttäjältä ${reportTarget}, jonka sisältö on:"
+msgid "You are reporting a chat message from {reportTarget} with the content:"
+msgstr "Olet ilmiantamassa viestin käyttäjältä {reportTarget}, jonka sisältö on:"
 
 #: /public/include/chat.js /public/include/lookup.js
 msgid "Sent report!"
@@ -2345,32 +2325,32 @@ msgid "just now"
 msgstr "juuri nyt"
 
 #: /public/include/lookup.js
-msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
-msgstr "${hoursStr}:${minuteStr}:${secsStr} sitten"
+msgid "{hoursStr}:{minuteStr}:{secsStr} ago"
+msgstr "{hoursStr}:{minuteStr}:{secsStr} sitten"
 
 #: /public/include/lookup.js
 msgid "Discord"
 msgstr "Discord"
 
 #: /public/include/notifications.js
-msgid "Posted by ${notification.who}"
-msgstr "Julkaissut ${notification.who}"
+msgid "Posted by {who}"
+msgstr "Julkaissut {who}"
 
 #: /public/include/notifications.js
-msgid "Expires ${expiry}"
-msgstr "Vanhenee ${expiry}"
+msgid "Expires {expiry}"
+msgstr "Vanhenee {expiry}"
 
 #: /public/include/template.js
 msgid "There was an error getting the image"
 msgstr "Tapahtui virhe hankkiessa kuvaa"
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr "Seuraava pikselisi tulee olemaan saatavilla ${delay} sekunnissa!"
+msgid "Your next pixel will be available in {delay} seconds!"
+msgstr "Seuraava pikselisi tulee olemaan saatavilla {delay} sekunnissa!"
 
 #: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr "Seuraava pikseilisi on ollut saatavilla ${alertDelay} sekuntia!"
+msgid "Your next pixel has been available for {alertDelay} seconds!"
+msgstr "Seuraava pikseilisi on ollut saatavilla {alertDelay} sekuntia!"
 
 #: /public/include/timer.js
 msgid "Your next pixel is available!"
@@ -2417,8 +2397,8 @@ msgid "Red"
 msgstr "Punainen"
 
 #: /public/include/uiHelper.js
-msgid "A new ${type} report has been received."
-msgstr "Uusi ${type} ilmianto on saatu."
+msgid "A new {type} report has been received."
+msgstr "Uusi {type} ilmianto on saatu."
 
 #: /public/include/uiHelper.js
 msgid "Cannot fetch local files. Use the file selector in template settings."
@@ -2473,8 +2453,8 @@ msgid "You are permanently banned."
 msgstr "Sinulla on lopullinen porttikielto."
 
 #: /public/include/user.js
-msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
-msgstr "Sinulla on väliaikainen porttikielto ja et voi asettaa ennen aikaa ${timestamp}"
+msgid "You are temporarily banned and will not be allowed to place until {timestamp}"
+msgstr "Sinulla on väliaikainen porttikielto ja et voi asettaa ennen aikaa {timestamp}"
 
 #: /public/include/user.js
 msgid "You can contact us using one of the links in the info menu."
@@ -2523,3 +2503,33 @@ msgstr "Paina tästä jatkaaksesi."
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Hälytys"
+
+#~ msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
+#~ msgstr "Tervetuloa pxls.space:een! Pxls on monen pelaajan yhteistyöllinen nettikanvaasi, joka perustuu Redditin <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> -tapahtumaan vuodelta 2017. joka mahdollistaq minkä tahansi huviteltavissasi olvean luomisen pikseli kerrallaan. Liity satojen muiden pelaajien kanssa Pxls yhteisöön ja luo mahtavia taideteoksia yhdessä joukkueena, tai yksin."
+
+#~ msgid "The best place to reach staff and fellow community is in the discord!"
+#~ msgstr "Paras paikka saavuttaa henkilökunta ja yhteisön jäseniä on Discordissa!"
+
+#~ msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
+#~ msgstr "Käy katsomassa sosiaalisen median sivumme, ja ole hyvä ja lue säännöt alapuolella. Pidä hauskaa luodessasi (tai muuttaessasi) taidetta!"
+
+#~ msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
+#~ msgstr "Olemme ylpeitä yrittäessämme pitää avoimen kanvaasin puhtaana ulkoisista häiriöistä meidän osaltamme, etenkin sensoroinnista. Kuitenkin, yhteisön hyväksi ja uskomustemme puolseta, ole hyvä ja huomioi ja noudata seuraavia ohjeita:"
+
+#~ msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
+#~ msgstr "Ei vihanomaista kuvantamista tai halventavaa puhetta. Tämä sisältää mutta ei ole rajattu sanoihin kuten <i>f****t</i>, <i>n****r</i>, jne; mukaanlukien Swastika, Vasara ja Sirppi, ja mitkä tahansa muut terrorismin symbolit."
+
+#~ msgid "No NSFW or NSFL content."
+#~ msgstr "Ei NSFW tai NSFL sisältöä."
+
+#~ msgid "No nudity or otherwise sexually explicit content"
+#~ msgstr "Ei alastomuutta tai muuten seksuaalista sisältöä"
+
+#~ msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
+#~ msgstr "Ei naista-esittäviä nännejä/paljaita rintoja, sukuelimiä, seksuaalisia nesteitä"
+
+#~ msgid "No sexual imagery/erotica"
+#~ msgstr "Ei seksuaalista kuvantamista/erotiikkaa"
+
+#~ msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+#~ msgstr "Pidä chatti säädyllisenä. Ei haukkumista tai homophobista/transphobista/disabliststa kielenkäyttöä."

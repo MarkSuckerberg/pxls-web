@@ -1,121 +1,94 @@
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
+const GettextWebpackPlugin = require("gettext-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-function translate(pofile) {
-	return through.obj(function (file, enc, callback) {
-		if (file.isBuffer()) {
-			PO.load(pofile, (error, pofile) => {
-				if (error) {
-					callback(error);
-				} else {
-					let contents = file.contents.toString();
-					const script = esprima.parseScript(contents, { range: true });
-					const translationCalls = script.body
-						.map(findTranslationCalls)
-						.flat()
-						.sort((a, b) => a.range.start - b.range.start);
+const devMode = process.env.NODE_ENV !== "production";
 
-					let offset = 0;
+const locales = devMode ? [""] : ["", "bg", "de", "fi", "fr", "lv", "ru", "sv", "tok"];
 
-					for (const call of translationCalls) {
-						const [argument] = call.arguments;
+module.exports = locales.map(function (locale) {
+	return {
+		mode: devMode ? "development" : "production",
+		devtool: devMode ? "inline-source-map" : false,
+		context: path.resolve(__dirname, "public"),
+		entry: {
+			pxls: "./pxls.js",
+			SLIDEIN: { import: "./SLIDEIN.js", filename: "SLIDEIN.js" },
+			serviceworker: { import: "./serviceWorker.js", filename: "serviceWorker.js" },
+			admin: { import: "./admin/admin.js", filename: path.join("admin", locale ? `admin_${locale}.js` : "admin.js") },
+		},
+		output: {
+			path: path.resolve(__dirname, "dist"),
+			filename: locale ? `pxls_${locale}.js` : "pxls.js",
+			publicPath: "/",
+			clean: !locale, // only clean for the first (default) locale
+		},
 
-						const [start, end] = call.range;
-						const length = end - start;
-
-						const original = contract(contents.substring(...argument.range.map((p) => p + offset)), 1);
-						const quote = contents[argument.range[0] + offset];
-
-						const item = pofile.items.find((i) => i.msgid === original);
-
-						const replaceContent = (item && item.msgstr[0]) || original;
-						const replace = quote + replaceContent.replace(new RegExp(`([^\\\\])([${quote}])`, "g"), "$1\\$2") + quote;
-
-						// just in case something goes wrong
-						if (contents.substring(start + offset, start + offset + 2) !== "__") {
-							callback(new Error("Translation offset drift"));
-						}
-
-						contents = contents.substring(0, offset + start) + replace + contents.substring(offset + end);
-						offset += replace.length - length;
-					}
-
-					file.contents = Buffer.from(contents);
-
-					callback(null, file);
-				}
-			});
-		} else {
-			callback(new Error("Expected buffer"));
-		}
-	});
-}
-
-module.exports = {
-	mode: "development",
-	context: path.resolve(__dirname, "public"),
-	entry: { pxls: "./pxls.js", SLIDEIN: { import: "./SLIDEIN.js", filename: "SLIDEIN.js" }, serviceworker: { import: "./serviceWorker.js", filename: "serviceWorker.js" } },
-	output: {
-		path: path.resolve(__dirname, "dist"),
-		filename: "pxls.js",
-		clean: true,
-	},
-
-	module: {
-		/**
-		 * rules needs to be Array []
-		 */
-		rules: [
-			{
-				test: /\.css$/,
-				use: [
-					"style-loader",
-					{
-						loader: "css-loader",
-						options: {
-							minimize: true,
+		module: {
+			/**
+			 * rules needs to be Array []
+			 */
+			rules: [
+				{
+					test: /\.css$/,
+					use: [
+						devMode
+							? "style-loader"
+							: {
+									loader: MiniCssExtractPlugin.loader,
+									options: {
+										publicPath: (resourcePath, context) =>
+											// publicPath is the relative path of the resource to the context
+											// e.g. for ./css/admin/main.css the publicPath will be ../../
+											// while for ./css/main.css the publicPath will be ../
+											`${path.relative(path.dirname(resourcePath), context)}/`,
+									},
+							  },
+						"css-loader",
+					],
+				},
+				{
+					test: /\.(jpeg|png|gif|svg)$/,
+					use: [
+						{
+							loader: "file-loader",
+							options: {
+								name: "[name].[ext]",
+							},
 						},
-					},
-				],
-			},
-			{
-				test: /\.(jpeg|png|gif|svg)$/,
-				use: [
-					{
-						loader: "file-loader",
-						options: {
-							name: "[name].[ext]",
-						},
-					},
-					"image-webpack-loader",
-				],
-			},
-		],
-	},
-	/**
-	 * plugins needs to be Array []
-	 */
-	plugins: [
-		new webpack.optimize.ModuleConcatenationPlugin(),
-		new CopyPlugin({
-			patterns: [
-				{ from: "*.css", to: "../dist" },
-				{ from: "*.min.js", to: "../dist" },
-				{ from: "*.wav", to: "../dist" },
-				{ from: "*.html", to: "../dist" },
-				{ from: "admin/**/*", to: "../dist" },
-				{ from: "themes/**/*", to: "../dist" },
-				{ from: "webfonts/**/*", to: "../dist" },
-				{ from: "profile/**/*", to: "../dist" },
+						"image-webpack-loader",
+					],
+				},
 			],
-		}),
-	],
-	/**
-	 * webpack-dev-server
-	 */
-	devServer: {
-		contentBase: "./public",
-	},
-};
+		},
+		optimization: {
+			minimizer: [new CssMinimizerPlugin()],
+		},
+		/**
+		 * plugins needs to be Array []
+		 */
+		plugins: [
+			new GettextWebpackPlugin({ translation: locale ? path.join(__dirname, "po", `Localization_${locale}.po`) : null, fallbackTranslation: path.join(__dirname, "po", "Localization.po") }),
+			new webpack.optimize.ModuleConcatenationPlugin(),
+			new CopyPlugin({
+				patterns: [
+					{ from: "*.css", to: "../dist" },
+					{ from: "*.min.js", to: "../dist" },
+					{ from: "*.wav", to: "../dist" },
+					{ from: "*.html", to: "../dist" },
+					{ from: "admin/**/*.css", to: "../dist" },
+					{ from: "themes/**/*", to: "../dist" },
+					{ from: "webfonts/**/*", to: "../dist" },
+					{ from: "profile/**/*", to: "../dist" },
+				],
+			}),
+			new webpack.DefinePlugin({
+				"process.env.locale": JSON.stringify(locale),
+			}),
+		].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
+	};
+});
 

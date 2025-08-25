@@ -22,7 +22,9 @@
 		"App": "writable",
 		"SLIDEIN": "readonly",
 		"interact": "readonly",
-		"__": "writable"
+		"__": "writable",
+		"_p": "writable",
+		"_c": "writable"
 	}
 }
 

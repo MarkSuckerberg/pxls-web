@@ -8,6 +8,7 @@ const { lookup } = require('./lookup');
 const { ban } = require('./ban');
 
 const { analytics } = require('./helpers');
+const { i18n } = require('./helpers');
 
 // this holds user stuff / info
 const user = (function() {
@@ -228,6 +229,7 @@ const user = (function() {
         self.loggedIn = true;
         self.pixelCount = data.pixelCount;
         self.pixelCountAllTime = data.pixelCountAllTime;
+        uiHelper.setMax(data.maxStacked);
         self.updatePixelCountElements();
         self.elements.pixelCounts.fadeIn(200);
         self.placementOverrides = data.placementOverrides;
@@ -256,7 +258,7 @@ const user = (function() {
         } else if (data.banned === true) {
           isBanned = true;
           const timestamp = new Date(data.banExpiry).toLocaleString();
-          crel(banelem, crel('p', __(`You are temporarily banned and will not be allowed to place until ${timestamp}`)));
+          crel(banelem, crel('p', i18n(__('You are temporarily banned and will not be allowed to place until {timestamp}'), {timestamp: timestamp})));
         } else if (self.isStaff()) {
           if (window.deInitAdmin) {
             window.deInitAdmin();

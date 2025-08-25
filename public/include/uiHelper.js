@@ -7,6 +7,7 @@ const { chat } = require('./chat');
 const { serviceWorkerHelper } = require('./serviceworkers');
 const { template } = require('./template');
 const { ls, setCookie } = require('./storage');
+const { i18n } = require('./helpers');
 let timer;
 let place;
 let board;
@@ -123,7 +124,7 @@ const uiHelper = (function() {
       });
       socket.on('received_report', (data) => {
         const type = data.report_type.toLowerCase();
-        new SLIDEIN.Slidein(__(`A new ${type} report has been received.`), 'info-circle').show().closeAfter(3000);
+        new SLIDEIN.Slidein(i18n(__('A new {type} report has been received.'), {type: type}), 'info-circle').show().closeAfter(3000);
       });
 
       const _states = ls.get('settings.collapse.states');

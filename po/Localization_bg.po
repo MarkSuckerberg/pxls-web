@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2025-08-25T15:32:08.074Z\n"
 "Language: bg\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -1302,44 +1302,24 @@ msgid "Welcome!"
 msgstr "Добре дошли!"
 
 #: /views/partials/info.handlebars
-msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
-msgstr "Добре дошли в pxls.space! Pxls.space е онлайн платно за множество играчи, на което можете да нарисувате каквото си пожелаете. Присъединете се към стотици други играчи и създайте каквото пожелаете, в екип или соло."
-
-#: /views/partials/info.handlebars
-msgid "The best place to reach staff and fellow community is in the discord!"
-msgstr "Най-доброто място за комуникация и  консултиране с модераторите и администраторите е дискорд сървъра ни."
-
-#: /views/partials/info.handlebars
-msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-msgstr "Молим Ви да отделите малко внимание на правилата, които следват. Приятно прекарване!"
-
-#: /views/partials/info.handlebars
 msgid "Canvas Rules"
 msgstr "Правила, отнасящи се до платното"
 
 #: /views/partials/info.handlebars
-msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
-msgstr "Нашата цел е платното да е свободно от цензура, но за благото на обществото има някои правила:"
+msgid "<b>PLEASE BE 18+.</b> This isn't specifically a NSFW canvas, but this is for adults only."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
-msgstr "Без пречупени кръстове и изписването на силно обидни думи, като <i>педал</i>, <i>педераст</i> и английските <i>f****t</i>, <i>n****r</i> и <i>retard</i>. "
+msgid "No hateful imagery or derogatory speech."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No NSFW or NSFL content."
-msgstr "Без нецензурни изображения."
+msgid "No overly NSFW or NSFL content."
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "No nudity or otherwise sexually explicit content"
-msgstr "Без голота или силно еротични изображения"
-
-#: /views/partials/info.handlebars
-msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
-msgstr "Без напълно оголени женски гърди, женски и мъжки полови органи и сексуални течности"
-
-#: /views/partials/info.handlebars
-msgid "No sexual imagery/erotica"
-msgstr "Без сексуални илюстрации"
+msgid "No excessive nudity or otherwise sexually explicit content"
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No excessive blood or otherwise obscene/shocking content"
@@ -1366,10 +1346,6 @@ msgid "Staff have final say in any rule disputes"
 msgstr "Екипът от модератори и администратори има последната дума в спорове за правилата"
 
 #: /views/partials/info.handlebars
-msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
-msgstr "Ако смятате, че даден модератор е пристъпил неправилно или непристойно, контактувайте администратор."
-
-#: /views/partials/info.handlebars
 msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
 msgstr "Ако смятате, че даден модератор се е отнесъл неправилно спрямо вас, контактувайте другите членове на екипа."
 
@@ -1378,8 +1354,8 @@ msgid "Chat Rules"
 msgstr "Правила, отнасящи се до чата"
 
 #: /views/partials/info.handlebars
-msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
-msgstr "Дръжте се цивилизовано, без хомофобски и расистки изказвания."
+msgid "Keep chat civil. Don't be a jerk."
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "No hate speech. This includes emoji/symbols/ASCII art."
@@ -1412,6 +1388,10 @@ msgstr "Без нецензорни символи в чата."
 #: /views/partials/info.handlebars
 msgid "No personal information"
 msgstr "Без твърде лична информация (адрес, пълно име( място на учене/работа и т.н.)"
+
+#: /views/partials/info.handlebars
+msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
+msgstr "Ако смятате, че даден модератор е пристъпил неправилно или непристойно, контактувайте администратор."
 
 #: /views/partials/info.handlebars
 msgid "Links"
@@ -1801,7 +1781,7 @@ msgid "Banned user"
 msgstr ""
 
 #: /public/admin/admin.js
-msgid "Unbanned user ${username}"
+msgid "Unbanned user {username}"
 msgstr ""
 
 #. Context: ban type
@@ -1905,7 +1885,7 @@ msgstr ""
 
 #. Admin check. Example: type = 'username', arg = 'pxlsuser94'
 #: /public/admin/admin.js
-msgid "${type} ${arg} not found."
+msgid "{type} {arg} not found."
 msgstr ""
 
 #: /public/admin/admin.js
@@ -1913,7 +1893,7 @@ msgid "Unban Reason:"
 msgstr ""
 
 #: /public/admin/admin.js
-msgid "Unbanning ${username}"
+msgid "Unbanning {username}"
 msgstr ""
 
 #: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
@@ -2021,8 +2001,8 @@ msgid "none provided"
 msgstr ""
 
 #: /public/include/chat.js
-msgid "Purged by ${purge.initiator} with reason: ${reason}"
-msgstr "Изчистено от ${purge.initiator} с причина: ${reason}"
+msgid "Purged by {initiator} with reason: {reason}"
+msgstr "Изчистено от {initiator} с причина: {reason}"
 
 #: /public/include/chat.js
 msgid "External Link"
@@ -2109,7 +2089,7 @@ msgid "Enter a reason for your report"
 msgstr "Въведете причина за Вашия доклад (на английски)"
 
 #: /public/include/chat.js
-msgid "You are reporting a chat message from ${reportTarget} with the content:"
+msgid "You are reporting a chat message from {reportTarget} with the content:"
 msgstr ""
 
 #: /public/include/chat.js /public/include/lookup.js
@@ -2345,32 +2325,32 @@ msgid "just now"
 msgstr "току-що"
 
 #: /public/include/lookup.js
-msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
-msgstr "$преди {hoursStr}:${minuteStr}:${secsStr}"
+msgid "{hoursStr}:{minuteStr}:{secsStr} ago"
+msgstr "$преди {hoursStr}:{secsStr}:{minuteStr}:{secsStr}"
 
 #: /public/include/lookup.js
 msgid "Discord"
 msgstr "Дискорд"
 
 #: /public/include/notifications.js
-msgid "Posted by ${notification.who}"
-msgstr "Изпратено от ${notification.who}"
+msgid "Posted by {who}"
+msgstr "Изпратено от {who}"
 
 #: /public/include/notifications.js
-msgid "Expires ${expiry}"
-msgstr "Свършва да действа на ${expiry}"
+msgid "Expires {expiry}"
+msgstr "Свършва да действа на {expiry}"
 
 #: /public/include/template.js
 msgid "There was an error getting the image"
 msgstr "Настъпи проблем при получаване на изображението"
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr "Следващият Ви пиксел ще е наличен след ${delay} секунди."
+msgid "Your next pixel will be available in {delay} seconds!"
+msgstr "Следващият Ви пиксел ще е наличен след {delay} секунди."
 
 #: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr "Следващият Ви пиксел е наличен от ${alertDelay} секунди."
+msgid "Your next pixel has been available for {alertDelay} seconds!"
+msgstr "Следващият Ви пиксел е наличен от {alertDelay} секунди."
 
 #: /public/include/timer.js
 msgid "Your next pixel is available!"
@@ -2417,7 +2397,7 @@ msgid "Red"
 msgstr "Червена"
 
 #: /public/include/uiHelper.js
-msgid "A new ${type} report has been received."
+msgid "A new {type} report has been received."
 msgstr ""
 
 #: /public/include/uiHelper.js
@@ -2473,8 +2453,8 @@ msgid "You are permanently banned."
 msgstr "Вие сте наказани за неопределен срок."
 
 #: /public/include/user.js
-msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
-msgstr "Вие сте наказани до ${timestamp} и дотогава нямате право да поставяте пиксели."
+msgid "You are temporarily banned and will not be allowed to place until {timestamp}"
+msgstr "Вие сте наказани до {timestamp} и дотогава нямате право да поставяте пиксели."
 
 #: /public/include/user.js
 msgid "You can contact us using one of the links in the info menu."
@@ -2523,6 +2503,36 @@ msgstr ""
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Внимание"
+
+#~ msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
+#~ msgstr "Добре дошли в pxls.space! Pxls.space е онлайн платно за множество играчи, на което можете да нарисувате каквото си пожелаете. Присъединете се към стотици други играчи и създайте каквото пожелаете, в екип или соло."
+
+#~ msgid "The best place to reach staff and fellow community is in the discord!"
+#~ msgstr "Най-доброто място за комуникация и  консултиране с модераторите и администраторите е дискорд сървъра ни."
+
+#~ msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
+#~ msgstr "Молим Ви да отделите малко внимание на правилата, които следват. Приятно прекарване!"
+
+#~ msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
+#~ msgstr "Нашата цел е платното да е свободно от цензура, но за благото на обществото има някои правила:"
+
+#~ msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
+#~ msgstr "Без пречупени кръстове и изписването на силно обидни думи, като <i>педал</i>, <i>педераст</i> и английските <i>f****t</i>, <i>n****r</i> и <i>retard</i>. "
+
+#~ msgid "No NSFW or NSFL content."
+#~ msgstr "Без нецензурни изображения."
+
+#~ msgid "No nudity or otherwise sexually explicit content"
+#~ msgstr "Без голота или силно еротични изображения"
+
+#~ msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
+#~ msgstr "Без напълно оголени женски гърди, женски и мъжки полови органи и сексуални течности"
+
+#~ msgid "No sexual imagery/erotica"
+#~ msgstr "Без сексуални илюстрации"
+
+#~ msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+#~ msgstr "Дръжте се цивилизовано, без хомофобски и расистки изказвания."
 
 #~ msgid "Subreddit"
 #~ msgstr "Редит"

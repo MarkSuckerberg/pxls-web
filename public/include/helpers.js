@@ -116,3 +116,18 @@ module.exports.flags = {
   possiblyMobile,
   haveImageRendering
 };
+
+/**
+ * Translates a string.
+ * @param str The string to translate.
+ * @param args The arguments to replace.
+ * @returns {*|string} The translated string.
+ */
+function i18n(str, args) {
+  for (let i = 0; i < args.length; i++) {
+    str = str.replace(`{${i}}`, args[i]);
+  }
+  return str;
+}
+
+exports.i18n = i18n;

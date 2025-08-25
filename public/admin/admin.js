@@ -1,4 +1,5 @@
 'use strict';
+const i18n = require('../utils').i18n;
 (function () {
   let admin = null;
   const genButton = function(s) {
@@ -123,7 +124,7 @@
           username,
           reason
         }, function () {
-          admin.modal.showText(__(`Unbanned user ${username}`), { modalOpts: { closeExisting: true } });
+          admin.modal.showText(i18n(__('Unbanned user {username}'), {username: username}), { modalOpts: { closeExisting: true } });
           if (fn) {
             fn();
           }
@@ -313,7 +314,7 @@
         toPost[type] = arg;
         $.post('/admin/check', toPost, self.callback).fail(function () {
           // translator: Admin check. Example: type = 'username', arg = 'pxlsuser94'
-          admin.modal.showText(__(`${type} ${arg} not found.`));
+          admin.modal.showText(i18n(__(`{type} {arg} not found.`), {type: type, arg: arg}));
         });
       },
       popUnban: username => {
@@ -324,7 +325,7 @@
         txtUnbanReason.addEventListener('keydown', e => e.stopPropagation());
 
         const unbanWrapper = crel('form', { class: 'chatmod-container' },
-          crel('p', __(`Unbanning ${username}`)),
+          crel('p', i18n(__('Unbanning {username}'), {username: username})),
           lblUnbanReason,
           crel('div', { class: 'buttons' },
             crel('button', {
