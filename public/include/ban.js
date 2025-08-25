@@ -26,7 +26,7 @@ module.exports.ban = (function() {
 
       const _Event = Event;
       // enough of being nice
-      // eslint-disable-next-line no-global-assign
+       
       Event = function(e, s) {
         if (self.bad_events.indexOf(e.toLowerCase()) !== -1) {
           self.shadow('bad Event ' + self.bad_events[self.bad_events.indexOf(e.toLowerCase())]);
@@ -34,7 +34,7 @@ module.exports.ban = (function() {
         return new _Event(e, s);
       };
       const _CustomEvent = CustomEvent;
-      // eslint-disable-next-line no-global-assign
+       
       CustomEvent = function(e, s) {
         if (self.bad_events.indexOf(e.toLowerCase()) !== -1) {
           self.shadow('bad CustomEvent ' + self.bad_events[self.bad_events.indexOf(e.toLowerCase())]);
@@ -42,7 +42,7 @@ module.exports.ban = (function() {
         return new _CustomEvent(e, s);
       };
       const createEvent = document.createEvent;
-      // eslint-disable-next-line no-global-assign
+       
       document.createEvent = function(e, s) {
         if (self.bad_events.indexOf(e.toLowerCase()) !== -1) {
           self.shadow('bad document.createEvent ' + self.bad_events[self.bad_events.indexOf(e.toLowerCase())]);

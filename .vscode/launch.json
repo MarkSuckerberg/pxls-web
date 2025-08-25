@@ -8,7 +8,7 @@
 			"type": "firefox",
 			"request": "launch",
 			"reAttach": false,
-			"name": "Launch localhost",
+			"name": "Launch Firefox",
 			"url": "http://localhost:3000",
 			"webRoot": "${workspaceFolder}",
 			"pathMappings": [
@@ -33,7 +33,7 @@
 			"pauseForSourceMap": true
 		},
 		{
-			"name": "Launch via NPM",
+			"name": "Launch Server",
 			"request": "launch",
 			"runtimeArgs": ["run", "dev"],
 			"runtimeExecutable": "npm",

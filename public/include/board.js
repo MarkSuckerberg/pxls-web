@@ -13,6 +13,8 @@ const { ls } = require('./storage');
 const { coords } = require('./coords');
 let query;
 
+const interact = require('interactjs');
+
 const { flags, createImageData, binaryAjax } = require('./helpers');
 const { haveImageRendering, haveZoomRendering } = flags;
 

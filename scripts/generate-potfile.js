@@ -19,7 +19,7 @@ const poFile = new PO();
 poFile.headers['Project-Id-Version'] = 'Pxls';
 poFile.headers['POT-Creation-Date'] = (new Date()).toISOString();
 // "Better written as…" no it's not - look at the context.
-/* eslint-disable-next-line dot-notation */
+ 
 poFile.headers['Language'] = '';
 poFile.headers['Content-Type'] = 'text/plain; charset=UTF-8';
 

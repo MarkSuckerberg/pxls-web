@@ -7,6 +7,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const devMode = process.env.NODE_ENV !== "production";
 
+if (devMode) {
+	console.info("❗ Development environment detected.");
+}
+
 const locales = devMode ? [""] : ["", "bg", "de", "fi", "fr", "lv", "ru", "sv", "tok"];
 
 module.exports = locales.map(function (locale) {
@@ -16,15 +20,14 @@ module.exports = locales.map(function (locale) {
 		context: path.resolve(__dirname, "public"),
 		entry: {
 			pxls: "./pxls.js",
-			SLIDEIN: { import: "./SLIDEIN.js", filename: "SLIDEIN.js" },
 			serviceworker: { import: "./serviceWorker.js", filename: "serviceWorker.js" },
 			admin: { import: "./admin/admin.js", filename: path.join("admin", locale ? `admin_${locale}.js` : "admin.js") },
+			profile: { import: "./profile/profile.js", filename: path.join("profile", "profile.js") },
 		},
 		output: {
 			path: path.resolve(__dirname, "dist"),
-			filename: locale ? `pxls_${locale}.js` : "pxls.js",
+			filename: locale ? `[name]_${locale}.js` : "[name].js",
 			publicPath: "/",
-			clean: !locale, // only clean for the first (default) locale
 		},
 
 		module: {
@@ -34,21 +37,7 @@ module.exports = locales.map(function (locale) {
 			rules: [
 				{
 					test: /\.css$/,
-					use: [
-						devMode
-							? "style-loader"
-							: {
-									loader: MiniCssExtractPlugin.loader,
-									options: {
-										publicPath: (resourcePath, context) =>
-											// publicPath is the relative path of the resource to the context
-											// e.g. for ./css/admin/main.css the publicPath will be ../../
-											// while for ./css/main.css the publicPath will be ../
-											`${path.relative(path.dirname(resourcePath), context)}/`,
-									},
-							  },
-						"css-loader",
-					],
+					use: [devMode ? "style-loader" : MiniCssExtractPlugin.loader, "css-loader"],
 				},
 				{
 					test: /\.(jpeg|png|gif|svg)$/,
@@ -59,12 +48,12 @@ module.exports = locales.map(function (locale) {
 								name: "[name].[ext]",
 							},
 						},
-						"image-webpack-loader",
 					],
 				},
 			],
 		},
 		optimization: {
+			minimize: !devMode,
 			minimizer: [new CssMinimizerPlugin()],
 		},
 		/**
@@ -75,14 +64,10 @@ module.exports = locales.map(function (locale) {
 			new webpack.optimize.ModuleConcatenationPlugin(),
 			new CopyPlugin({
 				patterns: [
-					{ from: "*.css", to: "../dist" },
-					{ from: "*.min.js", to: "../dist" },
-					{ from: "*.wav", to: "../dist" },
-					{ from: "*.html", to: "../dist" },
-					{ from: "admin/**/*.css", to: "../dist" },
-					{ from: "themes/**/*", to: "../dist" },
-					{ from: "webfonts/**/*", to: "../dist" },
-					{ from: "profile/**/*", to: "../dist" },
+					{ from: "**/*.css", to: "../dist" },
+					{ from: "**/*.min.js", to: "../dist" },
+					{ from: "**/*.wav", to: "../dist" },
+					{ from: "**/*.html", to: "../dist" },
 				],
 			}),
 			new webpack.DefinePlugin({

@@ -1,120 +1,119 @@
 // first we define the global helperfunctions and figure out what kind of settings our browser needs to use
-module.exports.binaryAjax = async function(url) {
-  const response = await fetch(url);
-  const data = new Uint8Array(await response.arrayBuffer());
-  return data;
+module.exports.binaryAjax = async function (url) {
+	const response = await fetch(url);
+	const data = new Uint8Array(await response.arrayBuffer());
+	return data;
 };
-module.exports.createImageData = function(w, h) {
-  try {
-    return new ImageData(w, h);
-  } catch (e) {
-    const imgCanv = document.createElement('canvas');
-    imgCanv.width = w;
-    imgCanv.height = h;
-    return imgCanv.getContext('2d').getImageData(0, 0, w, h);
-  }
+module.exports.createImageData = function (w, h) {
+	try {
+		return new ImageData(w, h);
+	} catch (e) {
+		const imgCanv = document.createElement("canvas");
+		imgCanv.width = w;
+		imgCanv.height = h;
+		return imgCanv.getContext("2d").getImageData(0, 0, w, h);
+	}
 };
-module.exports.intToHex = (i) => `#${('000000' + (i >>> 0).toString(16)).slice(-6)}`;
-module.exports.hexToRGB = function(hex) {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result ? {
-    r: parseInt(result[1], 16),
-    g: parseInt(result[2], 16),
-    b: parseInt(result[3], 16)
-  } : null;
+module.exports.intToHex = (i) => `#${("000000" + (i >>> 0).toString(16)).slice(-6)}`;
+module.exports.hexToRGB = function (hex) {
+	const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+	return result
+		? {
+				r: parseInt(result[1], 16),
+				g: parseInt(result[2], 16),
+				b: parseInt(result[3], 16),
+		  }
+		: null;
 };
-module.exports.analytics = function() {
-  if (window.ga) {
-    window.ga.apply(this, arguments);
-  }
+module.exports.analytics = function () {
+	if (window.ga) {
+		window.ga.apply(this, arguments);
+	}
 };
 
 class LazyPromise extends Promise {
-  constructor(execute) {
-    super(resolve => {
-      resolve();
-    });
-    this.execute = execute;
-    this.promise = null;
-  }
+	constructor(execute) {
+		super((resolve) => {
+			resolve();
+		});
+		this.execute = execute;
+		this.promise = null;
+	}
 
-  static wrap(createPromise) {
-    return new LazyPromise(resolve => {
-      resolve(createPromise());
-    });
-  }
+	static wrap(createPromise) {
+		return new LazyPromise((resolve) => {
+			resolve(createPromise());
+		});
+	}
 
-  then(onFulfilled, onRejected) {
-    this.promise = this.promise || new Promise(this.execute);
-    this.promise.then(onFulfilled, onRejected);
-  }
+	then(onFulfilled, onRejected) {
+		this.promise = this.promise || new Promise(this.execute);
+		this.promise.then(onFulfilled, onRejected);
+	}
 
-  catch(onRejected) {
-    this.promise = this.promise || new Promise(this.execute);
-    this.promise.catch(onRejected);
-  }
+	catch(onRejected) {
+		this.promise = this.promise || new Promise(this.execute);
+		this.promise.catch(onRejected);
+	}
 
-  finally(onFinally) {
-    this.promise = this.promise || new Promise(this.execute);
-    this.promise.finally(onFinally);
-  }
+	finally(onFinally) {
+		this.promise = this.promise || new Promise(this.execute);
+		this.promise.finally(onFinally);
+	}
 }
 
 module.exports.LazyPromise = LazyPromise;
 
 const nua = navigator.userAgent;
-let haveImageRendering = (function() {
-  const checkImageRendering = function(prefix, crisp, pixelated, optimizeContrast) {
-    const d = document.createElement('div');
-    if (crisp) {
-      d.style.imageRendering = prefix + 'crisp-edges';
-      if (d.style.imageRendering === prefix + 'crisp-edges') {
-        return true;
-      }
-    }
-    if (pixelated) {
-      d.style.imageRendering = prefix + 'pixelated';
-      if (d.style.imageRendering === prefix + 'pixelated') {
-        return true;
-      }
-    }
-    if (optimizeContrast) {
-      d.style.imageRendering = prefix + 'optimize-contrast';
-      if (d.style.imageRendering === prefix + 'optimize-contrast') {
-        return true;
-      }
-    }
-    return false;
-  };
-  return checkImageRendering('', true, true, false) || checkImageRendering('-o-', true, false, false) || checkImageRendering('-moz-', true, false, false) || checkImageRendering('-webkit-', true, false, true);
+let haveImageRendering = (function () {
+	const checkImageRendering = function (prefix, crisp, pixelated, optimizeContrast) {
+		const d = document.createElement("div");
+		if (crisp) {
+			d.style.imageRendering = prefix + "crisp-edges";
+			if (d.style.imageRendering === prefix + "crisp-edges") {
+				return true;
+			}
+		}
+		if (pixelated) {
+			d.style.imageRendering = prefix + "pixelated";
+			if (d.style.imageRendering === prefix + "pixelated") {
+				return true;
+			}
+		}
+		if (optimizeContrast) {
+			d.style.imageRendering = prefix + "optimize-contrast";
+			if (d.style.imageRendering === prefix + "optimize-contrast") {
+				return true;
+			}
+		}
+		return false;
+	};
+	return checkImageRendering("", true, true, false) || checkImageRendering("-o-", true, false, false) || checkImageRendering("-moz-", true, false, false) || checkImageRendering("-webkit-", true, false, true);
 })();
 let haveZoomRendering = false;
 const webkitBased = nua.match(/AppleWebKit/i);
-const iOSSafari = (nua.match(/(iPod|iPhone|iPad)/i) && webkitBased);
-const desktopSafari = (nua.match(/safari/i) && !nua.match(/chrome/i));
-const msEdge = nua.indexOf('Edge') > -1;
-const possiblyMobile = window.innerWidth < 768 && nua.includes('Mobile');
+const iOSSafari = nua.match(/(iPod|iPhone|iPad)/i) && webkitBased;
+const desktopSafari = nua.match(/safari/i) && !nua.match(/chrome/i);
+const msEdge = nua.indexOf("Edge") > -1;
+const possiblyMobile = window.innerWidth < 768 && nua.includes("Mobile");
 if (iOSSafari) {
-  const iOS = parseFloat(
-    ('' + (/CPU.*OS ([0-9_]{1,5})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0, ''])[1])
-      .replace('undefined', '3_2').replace('_', '.').replace('_', '')
-  ) || false;
-  haveImageRendering = false;
-  if (iOS >= 11) {
-    haveZoomRendering = true;
-  }
+	const iOS = parseFloat(("" + (/CPU.*OS ([0-9_]{1,5})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0, ""])[1]).replace("undefined", "3_2").replace("_", ".").replace("_", "")) || false;
+	haveImageRendering = false;
+	if (iOS >= 11) {
+		haveZoomRendering = true;
+	}
 } else if (desktopSafari) {
-  haveImageRendering = false;
-  haveZoomRendering = true;
+	haveImageRendering = false;
+	haveZoomRendering = true;
 }
 if (msEdge) {
-  haveImageRendering = false;
+	haveImageRendering = false;
 }
 module.exports.flags = {
-  haveZoomRendering,
-  webkitBased,
-  possiblyMobile,
-  haveImageRendering
+	haveZoomRendering,
+	webkitBased,
+	possiblyMobile,
+	haveImageRendering,
 };
 
 /**
@@ -124,10 +123,12 @@ module.exports.flags = {
  * @returns {*|string} The translated string.
  */
 function i18n(str, args) {
-  for (let i = 0; i < args.length; i++) {
-    str = str.replace(`{${i}}`, args[i]);
-  }
-  return str;
+	for (const arg in args) {
+		const element = args[arg];
+		str = str.replace(`{${arg}}`, element);
+	}
+	return str;
 }
 
 exports.i18n = i18n;
+

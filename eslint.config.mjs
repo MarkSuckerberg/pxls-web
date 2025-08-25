@@ -18,7 +18,7 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([
-	globalIgnores(["**/*.min.js"]),
+	globalIgnores(["**/*.min.js", "**/node_modules/**", "**/dist/**"]),
 	{
 		plugins: {
 			import: fixupPluginRules(_import),
@@ -30,16 +30,11 @@ export default defineConfig([
 			globals: {
 				...globals.browser,
 				...globals.node,
-				$: "readonly",
-				crel: "readonly",
-				moment: "readonly",
 				EmojiButton: "readonly",
 				pxlsMarkdown: "readonly",
 				grecaptcha: "readonly",
-				twemoji: "readonly",
 				App: "writable",
 				SLIDEIN: "readonly",
-				interact: "readonly",
 				__: "writable",
 				_p: "writable",
 				_c: "writable",
