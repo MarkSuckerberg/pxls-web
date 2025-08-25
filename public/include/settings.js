@@ -372,7 +372,7 @@ module.exports.settings = (function() {
       }
     },
     audio: {
-      enable: setting('audio.enable', SettingType.TOGGLE, false, $('#setting-audio-enable')),
+      enable: setting('audio.enable', SettingType.TOGGLE, true, $('#setting-audio-enable')),
       alert: {
         src: setting('audio.alert.src', SettingType.TEXT, '', $('#setting-audio-alert-src')),
         volume: setting('audio.alert.volume', SettingType.RANGE, 1, $('#setting-audio-alert-volume'))
@@ -423,7 +423,7 @@ module.exports.settings = (function() {
     },
     place: {
       notification: {
-        enable: setting('place.notification.enable', SettingType.TOGGLE, false, $('#setting-place-notification-enable'))
+        enable: setting('place.notification.enable', SettingType.TOGGLE, true, $('#setting-place-notification-enable'))
       },
       deselectonplace: {
         enable: setting('place.deselectonplace.enable', SettingType.TOGGLE, false, $('#setting-place-deselectonplace-enable'))

@@ -15,7 +15,6 @@ const uiHelper = (function() {
   const self = {
     tabId: null,
     _workerIsTabFocused: false,
-    _available: -1,
     pixelsAvailable: -1,
     maxStacked: -1,
     _alertUpdateTimer: false,
@@ -680,6 +679,9 @@ const uiHelper = (function() {
     getAvailable() {
       return self.pixelsAvailable;
     },
+    isFull() {
+      return self.pixelsAvailable >= self.maxStacked;
+    },
     styleElemWithChatNameColor: (elem, colorIdx, layer = 'bg') => {
       elem.classList.remove(...self.specialChatColorClasses.reduce((acc, val) => {
         acc.push(...(Array.isArray(val) ? val : [val]));
@@ -814,6 +816,7 @@ const uiHelper = (function() {
     updateTimer: self.updateTimer,
     updateAvailable: self.updateAvailable,
     getAvailable: self.getAvailable,
+    isFull: self.isFull,
     setPlaceableText: self.setPlaceableText,
     setMax: self.setMax,
     setDiscordName: self.setDiscordName,

@@ -50,7 +50,7 @@ module.exports.timer = (function() {
         self.hasFiredNotification = true;
       }
 
-      if (delta > 0) {
+      if (delta > 0 || !uiHelper.isFull()) {
         self.elements.timer_container.show();
         delta++; // real people don't count seconds zero-based (programming is more awesome)
         const secs = Math.floor(delta % 60);
@@ -85,7 +85,7 @@ module.exports.timer = (function() {
           if (!this.runningTimer) {
             self.playAudio();
             if (!document.hasFocus()) {
-              const notif = nativeNotifications.maybeShow(__(`Your next pixel has been available for ${alertDelay} seconds!`));
+              const notif = nativeNotifications.maybeShow(__(`Your pixels have been full for ${alertDelay} seconds!`));
               if (notif) {
                 $(window).one('pxls:ack:place', () => notif.close());
               }
@@ -103,7 +103,7 @@ module.exports.timer = (function() {
       if (!self.hasFiredNotification) {
         self.playAudio();
         if (!document.hasFocus()) {
-          const notif = nativeNotifications.maybeShow(__('Your next pixel is available!'));
+          const notif = nativeNotifications.maybeShow(__('Your pixels are full!'));
           if (notif) {
             $(window).one('pxls:ack:place', () => notif.close());
           }
