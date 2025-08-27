@@ -912,6 +912,15 @@ dt {
     bottom: 11px;
 }
 
+.palette-button.erase-button {
+    font-size: 1.75rem;
+    color: var(--palette-deselect-button-color);
+}
+
+.palette-button.erase-button.active {
+    bottom: 11px;
+}
+
 .palette-number {
     position: absolute;
     transform: translate(-50%, 50%);

@@ -34,7 +34,7 @@ module.exports.place = (function () {
 		},
 		switch: function (newColorIdx) {
 			const isOnPalette = newColorIdx >= 0 && newColorIdx < self.palette.length;
-			const isTransparent = newColorIdx === 0xff && user.placementOverrides && user.placementOverrides.canPlaceAnyColor;
+			const isTransparent = newColorIdx === 0xfe || (newColorIdx === 0xff && user.placementOverrides && user.placementOverrides.canPlaceAnyColor);
 
 			if (!isOnPalette && !isTransparent) {
 				newColorIdx = -1;
@@ -174,6 +174,18 @@ module.exports.place = (function () {
 					.hide()
 					.click(function () {
 						self.switch(0xff);
+					})
+			);
+			self.elements.palette.prepend(
+				$("<button>")
+					.attr("type", "button")
+					.attr("data-idx", 0xfe)
+					.addClass("palette-button no-border erase-button")
+					.addClass("ontouchstart" in window ? "touch" : "no-touch")
+					.css("background-color", "transparent")
+					.append(crel("i", { class: "fas fa-eraser" }))
+					.on("click", function () {
+						self.switch(0xfe);
 					})
 			);
 			self.elements.palette.prepend(

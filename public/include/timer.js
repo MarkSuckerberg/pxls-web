@@ -51,7 +51,7 @@ module.exports.timer = (function () {
 				self.hasFiredNotification = true;
 			}
 
-			if (delta > 0 || !uiHelper.isFull()) {
+			if (delta > 0 || (!uiHelper.isFull() && uiHelper.getAvailable() !== 0)) {
 				self.elements.timer_container.show();
 				delta++; // real people don't count seconds zero-based (programming is more awesome)
 				const secs = Math.floor(delta % 60);
