@@ -11,6 +11,7 @@ const { socket } = require('./socket');
 const { grid } = require('./grid');
 const { ls } = require('./storage');
 const { coords } = require('./coords');
+const { timer } = require('./timer');
 let query;
 
 const interact = require('interactjs');
@@ -470,6 +471,7 @@ const board = (function() {
         uiHelper.setMax(data.maxStacked);
         chat.webinit(data);
         uiHelper.initBanner(data.chatBannerText);
+        timer.webinit(data.cooldownInfo);
         chromeOffsetWorkaround.update();
         if (data.captchaKey) {
           $('.g-recaptcha').attr('data-sitekey', data.captchaKey);

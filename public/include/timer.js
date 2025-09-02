@@ -15,6 +15,8 @@ module.exports.timer = (function () {
 		},
 		hasFiredNotification: true,
 		cooldown: 0,
+		cooldownLength: 0,
+		timerID: -1,
 		runningTimer: false,
 		audio: new Audio("notify.wav"),
 		title: "",
@@ -51,9 +53,9 @@ module.exports.timer = (function () {
 				self.hasFiredNotification = true;
 			}
 
-			if (delta > 0 || (!uiHelper.isFull() && uiHelper.getAvailable() !== 0)) {
+			if (delta > 0) {
 				self.elements.timer_container.show();
-				delta++; // real people don't count seconds zero-based (programming is more awesome)
+				//delta++; // real people don't count seconds zero-based (programming is more awesome)
 				const secs = Math.floor(delta % 60);
 				const secsStr = secs < 10 ? "0" + secs : secs;
 				const minutes = Math.floor(delta / 60);
@@ -68,9 +70,21 @@ module.exports.timer = (function () {
 					return;
 				}
 				self.runningTimer = true;
-				setTimeout(function () {
+				clearTimeout(self.timerID);
+				self.timerID = setTimeout(function () {
 					self.update(true);
 				}, 1000);
+				return;
+			}
+
+			if (self.cooldownLength && !uiHelper.isFull()) {
+				self.cooldown = new Date().getTime() + self.cooldownLength;
+
+				self.runningTimer = true;
+				clearTimeout(self.timerID);
+				self.playAudio();
+				uiHelper.setPlaceableText(uiHelper.getAvailable() + 1);
+				self.update(true);
 				return;
 			}
 
@@ -113,12 +127,15 @@ module.exports.timer = (function () {
 				self.hasFiredNotification = true;
 			}
 		},
+		webinit: function(data) {
+			self.cooldownLength = (data.staticCooldownSeconds || 0) * 1000
+		},
 		init: function () {
 			self.title = document.title;
 			self.elements.timer_container.hide();
 			self.elements.timer_chat.text("");
 
-			setTimeout(function () {
+			self.timerID = setTimeout(function () {
 				if (self.cooledDown() && uiHelper.getAvailable() === 0) {
 					uiHelper.setPlaceableText(uiHelper.getAvailable() + 1);
 				}
@@ -140,6 +157,7 @@ module.exports.timer = (function () {
 	};
 	return {
 		init: self.init,
+		webinit: self.webinit,
 		cooledDown: self.cooledDown,
 		playAudio: self.playAudio,
 		getCurrentTimer: self.getCurrentTimer,

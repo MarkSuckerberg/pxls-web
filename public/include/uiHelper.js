@@ -703,7 +703,6 @@ const uiHelper = (function () {
 			}
 		},
 		updateAvailable: function (count, cause) {
-			if (count > 0 && cause === "stackGain") timer.playAudio();
 			self.setPlaceableText(count);
 		},
 		setMax(maxStacked) {
