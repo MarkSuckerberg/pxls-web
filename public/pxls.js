@@ -75,6 +75,16 @@ window.App = (function () {
 	notifications.init();
 	chat.init();
 	chromeOffsetWorkaround.init();
+
+	if (!localStorage.getItem('popup_agreed')) {
+		if (!confirm("By using this site, you agree you are a legal adult. (This popup will only show up once)")) {
+			window.location.href = "https://stellers.gay"
+			window.location.replace("https://stellers.gay")
+			return
+		}
+		localStorage.setItem('popup_agreed', "true")
+	}
+
 	// and here we finally go...
 	board.start();
 
