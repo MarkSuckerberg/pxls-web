@@ -18,6 +18,7 @@ const uiHelper = (function () {
 		tabId: null,
 		_workerIsTabFocused: false,
 		pixelsAvailable: -1,
+		serverMax: -1,
 		maxStacked: -1,
 		_alertUpdateTimer: false,
 		initTitle: "",
@@ -705,8 +706,12 @@ const uiHelper = (function () {
 		updateAvailable: function (count, cause) {
 			self.setPlaceableText(count);
 		},
+		setServerMax(maxStacked) {
+			self.maxStacked = maxStacked;
+			self.serverMax = maxStacked;
+		},
 		setMax(maxStacked) {
-			self.maxStacked = maxStacked + 1;
+			self.maxStacked = maxStacked;
 		},
 		setPlaceableText(placeable) {
 			self.elements.stackCount.text(`${placeable}/${self.maxStacked}`);
@@ -866,6 +871,9 @@ const uiHelper = (function () {
 		isFull: self.isFull,
 		setPlaceableText: self.setPlaceableText,
 		setMax: self.setMax,
+		setServerMax: self.setServerMax,
+		getMax: () => self.maxStacked,
+		getServerMax: () => self.serverMax,
 		setDiscordName: self.setDiscordName,
 		updateAudio: self.updateAudio,
 		styleElemWithChatNameColor: self.styleElemWithChatNameColor,
@@ -875,12 +883,10 @@ const uiHelper = (function () {
 		},
 		getTitle: (prepend) => {
 			if (typeof prepend !== "string") {
-				if (self.pixelsAvailable > 0) {
-					prepend = `[${self.pixelsAvailable}/${self.maxStacked}]`;
-				} else if (self.pixelsAvailable === 0) {
-					prepend = `[${timer.getCurrentTimer()}]`;
+				if (self.isFull()) {
+					prepend = "[Full]";
 				} else {
-					prepend = "";
+					prepend = `[${self.pixelsAvailable}/${self.maxStacked}] (${timer.getCurrentTimer()})`;
 				}
 			}
 			const tplOpts = template.getOptions();

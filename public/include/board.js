@@ -468,7 +468,7 @@ const board = (function() {
         self.height = data.height;
         place.setPalette(data.palette);
         template.webinit(data);
-        uiHelper.setMax(data.maxStacked);
+        uiHelper.setServerMax(data.maxStacked);
         chat.webinit(data);
         uiHelper.initBanner(data.chatBannerText);
         timer.webinit(data.cooldownInfo);

@@ -431,7 +431,12 @@ const user = (function () {
 			self.elements.userMessage.fadeOut(200);
 		},
 		updatePixelCountElements: () => {
-			self.elements.pixelCounts.find("#current-pixel-count").text(self.pixelCount.toLocaleString());
+			var append = "";
+			if (uiHelper.getMax() > uiHelper.getServerMax()) {
+				append = ` (+${uiHelper.getMax() - uiHelper.getServerMax()} max)`;
+			}
+
+			self.elements.pixelCounts.find("#current-pixel-count").text(self.pixelCount.toLocaleString() + append);
 			self.elements.pixelCounts.find("#alltime-pixel-count").text(self.pixelCountAllTime.toLocaleString());
 		},
 	};

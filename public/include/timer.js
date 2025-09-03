@@ -127,19 +127,15 @@ module.exports.timer = (function () {
 				self.hasFiredNotification = true;
 			}
 		},
-		webinit: function(data) {
-			self.cooldownLength = (data.staticCooldownSeconds || 0) * 1000
+		webinit: function (data) {
+			self.cooldownLength = (data.staticCooldownSeconds || 0) * 1000;
+			self.update();
 		},
 		init: function () {
 			self.title = document.title;
 			self.elements.timer_container.hide();
 			self.elements.timer_chat.text("");
 
-			self.timerID = setTimeout(function () {
-				if (self.cooledDown() && uiHelper.getAvailable() === 0) {
-					uiHelper.setPlaceableText(uiHelper.getAvailable() + 1);
-				}
-			}, 250);
 			socket.on("cooldown", function (data) {
 				self.cooldown = new Date().getTime() + data.wait * 1000;
 				self.hasFiredNotification = data.wait === 0;
